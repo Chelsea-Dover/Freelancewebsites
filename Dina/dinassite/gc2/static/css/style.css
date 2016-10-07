@@ -13,8 +13,8 @@ nav {
     padding: 0 23px; }
   nav a {
     color: #8E8E8E;
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none; }
 
 .divider {
   background-color: #D8D8D8;
@@ -34,6 +34,9 @@ figure {
 svg {
   width: 12em; }
 
+.jumboWrapper {
+  margin-bottom: 4em; }
+
 section .jumbotron {
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -47,8 +50,26 @@ section .jumbotron {
   background-size: cover;
   background-position: center; }
 
+.bio {
+  color: #8E8E8E;
+  font-family: "Open Sans", sans-serif;
+  width: 84%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .bio article {
+    width: 45em; }
+
 main {
   width: 85%;
   margin: 100px auto 0; }
+
+aside {
+  width: 10em; }
+  aside img {
+    width: 100%;
+    border-radius: 100px; }
 
 /*# sourceMappingURL=style.css.map */

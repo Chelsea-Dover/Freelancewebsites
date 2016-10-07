@@ -3,6 +3,11 @@
 $mainFont: 'Open Sans', sans-serif;
 $lightGrey: #8E8E8E;
 $borderColor: #D8D8D8;
+
+@mixin mainText{
+   color: $lightGrey;
+   font-family: $mainFont;
+}
 nav {
   text-align: center;
   margin-top: 45px;
@@ -18,9 +23,9 @@ nav {
     padding: 0 23px;
   }
   a {
-    color: $lightGrey;
+    @include mainText;
     text-decoration: none;
-    font-family: $mainFont;
+
 }
 }
 
@@ -48,6 +53,10 @@ svg{
 
 //END OF BASE
 
+.jumboWrapper {
+    margin-bottom: 4em;
+}
+
 section{
   //width: 12em;
   .jumbotron{
@@ -65,7 +74,30 @@ section{
   }
 }
 
+.bio{
+  @include mainText;
+  width: 84%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  article{
+    width: 45em;
+  }
+
+}
+
+
 main{
   width: 85%;
   margin: 100px auto 0;
+}
+
+aside{
+  width: 10em;
+  img{
+    width: 100%;
+    border-radius: 100px
+  }
 }

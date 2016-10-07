@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from gc2 import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', include('gc2.urls', namespace='')),
+    url(r'^$', views.home, name='home'),
+    # url(r'^$', include('gc2.urls', namespace='')),
+    url(r'^about', views.about, name='about'),
+    url(r'^resources', views.resources, name='resources'),
+    url(r'^services', views.services, name='services'),
+    url(r'^testimonials', views.testimonials, name='testimonials'),
 ]
