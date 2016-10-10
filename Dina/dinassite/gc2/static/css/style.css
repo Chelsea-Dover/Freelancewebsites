@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:300";
+@import "https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:300";
 nav {
   text-align: center;
   margin-top: 45px; }
@@ -35,9 +35,11 @@ svg {
   width: 12em; }
 
 .jumboWrapper {
-  margin-bottom: 4em; }
+  margin-bottom: .50em;
+  opacity: 0; }
 
-section .jumbotron {
+.homePhoto {
+  background-image: url(../images/mount_hood-min.png);
   color: #fff;
   font-family: "Open Sans", sans-serif;
   display: flex;
@@ -46,9 +48,9 @@ section .jumbotron {
   font-size: 5em;
   width: 100%;
   height: 500px;
-  background-image: url(../images/mount_hood-min.png);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  text-align: center; }
 
 .bio {
   color: #8E8E8E;
@@ -66,10 +68,96 @@ main {
   width: 85%;
   margin: 100px auto 0; }
 
-aside {
+.bio aside {
   width: 10em; }
-  aside img {
+  .bio aside img {
     width: 100%;
     border-radius: 100px; }
+
+.aboutPage {
+  color: #8E8E8E;
+  text-align: center; }
+  .aboutPage blockquote {
+    font-size: xx-large;
+    margin-bottom: 10px; }
+  .aboutPage h1 {
+    font-size: 3.15em;
+    margin-bottom: 10px; }
+  .aboutPage article p {
+    font-size: larger;
+    line-height: 1.5em;
+    font-size: 1.15em; }
+
+.aboutPhoto {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-image: url(../images/mount_hood-min.png); }
+
+.miniAbout {
+  color: #8E8E8E;
+  font-family: "Cormorant Garamond", serif;
+  width: 95%;
+  margin: 0 auto; }
+  .miniAbout p {
+    color: #BCBCBC;
+    margin: 5px 0; }
+  .miniAbout h1 {
+    margin: 0; }
+
+.resourcePhoto {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5em;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-image: url(../images/mount_hood-min.png); }
+
+.resourceWrapper {
+  margin-bottom: 55px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  color: #8E8E8E; }
+  .resourceWrapper a {
+    color: #8E8E8E;
+    font-size: x-large;
+    text-decoration: none; }
+    .resourceWrapper a:visited {
+      color: #777777; }
+  .resourceWrapper li {
+    width: 17em; }
+  .resourceWrapper ul {
+    padding: 0;
+    list-style: none;
+    height: 19em;
+    overflow: scroll; }
+  .resourceWrapper h1 {
+    text-align: center;
+    border-bottom: solid 1px #D8D8D8;
+    margin: 5px; }
+  .resourceWrapper p {
+    color: #BCBCBC; }
+
+.mainWrapper {
+  height: 20em; }
+
+.testimonialsWrapper {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

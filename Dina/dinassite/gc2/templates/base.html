@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
 </head>
 <body>
        <header>
-           <figure>
-               <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               <figure>
+                   <a href="/">
+                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 533.6 372.1" style="enable-background:new 0 0 533.6 372.1;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
@@ -41,14 +43,15 @@
 	c-1.7,1.7-2.5,3.7-2.5,6.1h-17.3c0-7.1,2.5-13.2,7.6-18.3c5.1-5.1,11.2-7.6,18.4-7.6c7.1,0,13.2,2.5,18.3,7.6
 	c5.1,5.1,7.6,11.2,7.6,18.3c0,6-2,11.6-6,16.8c-4,5.2-8.8,9.6-14.4,13.2C500.2,179.7,497.2,181.6,493.8,183.8z"/>
 </svg>
-           </figure>
+                   </a>
+               </figure>
            <nav>
                <ul>
-                   <li><a href="#">Lorem</a></li>
-                   <li><a href="#">Amet</a></li>
-                   <li><a href="#">Ipsum</a></li>
-                   <li><a href="#">Dolor</a></li>
-                   <li><a href="#">Consectetuer</a></li>
+                   <li><a href="/about">About</a></li>
+                   <li><a href="/resources">Resources</a></li>
+                   <li><a href="/services">Services</a></li>
+                   <li><a href="/testimonials">Testimonials</a></li>
+                   <li><a href="/">Home</a></li>
                </ul>
                <div class="divider"></div>
            </nav>
@@ -58,7 +61,8 @@
     {% endblock content %}
 
    <footer class="contact">
-
+        <p>
+        </p>
    </footer>
 
     {% block script_tags %}
@@ -66,4 +70,6 @@
     {% endblock %}
 
 </body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/fadein.js' %}"></script>
 </html>
