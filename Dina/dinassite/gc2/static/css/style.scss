@@ -8,9 +8,42 @@ $lighterGrey: #BCBCBC;
 $borderColor: #D8D8D8;
 $secondFont:'Cormorant Garamond', serif;
 
+
 @mixin mainText{
    color: $lightGrey;
    font-family: $mainFont;
+}
+
+@mixin scroll{
+  flex-wrap: wrap;
+  margin-bottom: 55px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  color: $lightGrey;
+  a{
+    color: #777777;
+    font-size: x-large;
+    text-decoration: none;
+    &:visited{
+      color: $lightGrey;
+    }
+  }
+  ul{
+    padding: 0;
+    list-style: none;
+    height: 19em;
+    overflow: scroll;
+  }
+  h1{
+    text-align: center;
+    border-bottom: solid 1px $borderColor;
+    margin: 5px;
+  }
+  p{
+    color: $lighterGrey;
+  }
 }
 
 @mixin backgroundImg{
@@ -26,6 +59,22 @@ $secondFont:'Cormorant Garamond', serif;
   background-position: center;
   text-align: center;
 }
+
+@mixin about{
+  color: $lightGrey;
+  text-align: center;
+  h1{
+    font-size: 3.15em;
+    margin-bottom: 10px;
+  }
+  article{
+    p{
+      line-height: 1.5em;
+      font-size: 1.15em;
+    }
+  }
+}
+
 nav {
   text-align: center;
   margin-top: 45px;
@@ -35,6 +84,7 @@ nav {
     flex-direction: row;
     padding: 0;
     justify-content: center;
+    flex-wrap: wrap;
   }
   li{
     background-color: #ffffff;
@@ -69,28 +119,71 @@ svg{
   width: 12em;
 }
 
+
+.contact{
+  text-align: center;
+  color: $lightGrey;
+  //margin: 15px;
+  border-top: solid 2px $borderColor;
+  padding-top: 2em;
+  margin: 25px 15px;
+  li{
+    width: 11em;
+    font-size: larger;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    //align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    h2{
+      color:$borderColor;
+    }
+  }
+  a{
+    color: #777777;
+    text-decoration: none;
+  }
+
+}
 //END OF BASE
 
 .jumboWrapper {
     margin-bottom: .50em;
     opacity: 0;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100%;
+        max-height: 550px;
+    }
 }
 
 .homePhoto{
-  background-image: url(../images/mount_hood-min.png);
-  @include backgroundImg;
+  //background-image: url(../images/mount_hood-min.png);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  //@include backgroundImg;
 }
+
+
 
 .bio{
   @include mainText;
   width: 84%;
-  margin: 0 auto;
+  margin: 5em auto;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   article{
     width: 45em;
+    text-align: center;
   }
 
 }
@@ -106,30 +199,51 @@ main{
     width: 10em;
     img{
       width: 100%;
-      border-radius: 100px
+      border-radius: 100px;
+      min-width: 120px;
     }
 }}
 
+.textWrapper{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+    margin: 0;
+    bottom: 0;
+    .pageTitle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: 0;
+      font-size: 4.15em;
+    }
+}
+
 //ABOUT PAGE
 
-.aboutPage{
-  color: $lightGrey;
-  text-align: center;
-  blockquote{
-    font-size: xx-large;
-    margin-bottom: 10px;
-  }
-  h1{
-    font-size: 3.15em;
-    margin-bottom: 10px;
-  }
-  article{
-    p{
-      font-size: larger;
-      line-height: 1.5em;
-      font-size: 1.15em;
+.serviceAbout{
+  margin-top: 3em;
+  ul {
+      width: 22%;
+      margin: auto;
+      text-align: left;
     }
+  @include about;
+}
+
+.aboutPage{
+  a{
+    text-decoration: none;
   }
+  blockquote{
+    font-size: 1.97em;
+    margin-bottom: 10px;
+    color: $lightGrey;
+  }
+  @include about;
 }
 
 .aboutPhoto{
@@ -156,51 +270,101 @@ main{
 
 .resourcePhoto{
   @include backgroundImg;
-  background-image: url(../images/mount_hood-min.png);
+  //background-image: url(../images/mount_hood-min.png);
 }
 
-.resourceWrapper{
-  margin-bottom: 55px;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-  color: $lightGrey;
-  a{
-    color: $lightGrey;
-    font-size: x-large;
-    text-decoration: none;
-    &:visited{
-      color: #777777;;
-    }
-  }
 
-  li{
+.resourceWrapper {
+  //flex-wrap: wrap;
+  @include scroll;
+  li {
     width: 17em;
   }
-  ul{
-    padding: 0;
-    list-style: none;
-    height: 19em;
-    overflow: scroll;
+
+}
+
+.testimonialsWrapper{
+  @include scroll;
+  li {
+    //width: 20em;
+    //  width: 19.45em;
+    width: 15.45em;
   }
   h1{
-    text-align: center;
-    border-bottom: solid 1px $borderColor;
-    margin: 5px;
+    font-size: x-large;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
   }
-  p{
-    color: $lighterGrey;
+  blockquote{
+    margin: 0;
   }
 }
 
 
 .mainWrapper{
   height: 20em;
+  margin-bottom: 4em;
+
 }
 
 //Testimonials
 
 .testimonialsWrapper{
-  display: none;
+  //display: none;
+}
+
+//Services
+
+.servicesHeader{
+  list-style: none;
+}
+.services{
+  color: $lightGrey;
+  h1{
+    text-align: center;
+    font-size: 1.85em;
+    width: 82%;
+    margin: 1em auto 2em;
+  }
+  ul{
+    ul{
+      //list-style: none;
+      list-style-type: disc;
+    }
+  }
+}
+
+.servicesList{
+  li{
+    margin-bottom: 10px;
+  }
+}
+
+///////
+@media only screen and (max-width: 700px){
+  .textWrapper{
+
+  .pageTitle{
+    font-size: 3em;
+  }}
+  body{
+    //background-color: red;
+    margin: 8px;
+  }
+  //.mainWrapper{
+  //  margin-bottom: 4em;
+  //}
+
+}
+
+@media only screen and (max-width: 560px){
+  .divider{
+    margin: -41px 15px 0;
+  }
+}
+
+.diversity{
+  img {
+    width: 100%;
+  }
 }

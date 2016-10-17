@@ -3,11 +3,16 @@
 {% block content %}
     {% load staticfiles %}
     <main>
-        <section class="jumboWrapper resourcePhoto">
+        <section class="jumboWrapper homePhoto">
             <div class="jumbotron">
-                Resources
+                <img src="{% static 'images/mount_hood-min.png'%}">
             </div>
-            <!--<img src='{% static "images/mount_hood-min.png" %}'>-->
+
+            <div class="textWrapper">
+                <h1 class="pageTitle">
+                    Resources
+                </h1>
+            </div>
         </section>
 <!--19-->
         <ul class="resourceWrapper">

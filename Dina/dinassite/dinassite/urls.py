@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^resources', views.resources, name='resources'),
     url(r'^services', views.services, name='services'),
     url(r'^testimonials', views.testimonials, name='testimonials'),
+    url(r'^Diversity_Champion_2015', views.image, name='image'),
 ]

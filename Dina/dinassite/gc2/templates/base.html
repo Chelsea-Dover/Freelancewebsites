@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-
+    <title>Glassman Coaching + Consulting</title>
+    <link rel="icon" href="{% static 'images/gc2.ico'%}" type="image/x-icon" />
 </head>
 <body>
        <header>
@@ -47,11 +48,11 @@
                </figure>
            <nav>
                <ul>
-                   <li><a href="/about">About</a></li>
-                   <li><a href="/resources">Resources</a></li>
+                   <li><a href="/">Home</a></li>
                    <li><a href="/services">Services</a></li>
                    <li><a href="/testimonials">Testimonials</a></li>
-                   <li><a href="/">Home</a></li>
+                   <li><a href="/about">About</a></li>
+                   <li><a href="/resources">Resources</a></li>
                </ul>
                <div class="divider"></div>
            </nav>
@@ -61,8 +62,35 @@
     {% endblock content %}
 
    <footer class="contact">
-        <p>
-        </p>
+        <h1>
+            Contact me
+        </h1>
+       <ul>
+           <li>
+               <h2>
+                   Email
+               </h2>
+               <a href="#">
+                   dina@glassmancoaching.com
+               </a>
+           </li>
+           <li>
+               <h2>
+                   Phone number
+               </h2>
+               <p>
+                   (123) 123 1234
+               </p>
+           </li>
+           <li>
+               <h2>
+                   LinkedIn
+               </h2>
+               <a href="https://www.linkedin.com/in/dina-glassman-060b9250">
+                   Dina Glassman
+               </a>
+           </li>
+       </ul>
    </footer>
 
     {% block script_tags %}
