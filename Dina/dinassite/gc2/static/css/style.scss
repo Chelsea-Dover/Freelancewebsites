@@ -1,16 +1,41 @@
 //@import 'https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:300';
-@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:300';
+//@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond|Open+Sans:300';
+@import url('https://fonts.googleapis.com/css?family=Taviraj');
 
 
-$mainFont: 'Open Sans', sans-serif;
-$lightGrey: #8E8E8E;
-$lighterGrey: #BCBCBC;
+
+//Table of content
+//
+// 1. Variables
+// 2. mixins
+// 3. Base
+// 4. Home
+
+
+
+// VARIALBES
+$mainFont: Futura,Trebuchet MS,Arial,sans-serif;
+//font-family: Futura,Trebuchet MS,Arial,sans-serif;
+$darkPurple: #4d335a;
+$darkGreen: #447738;
 $borderColor: #D8D8D8;
-$secondFont:'Cormorant Garamond', serif;
+$secondFont:'Taviraj', serif;;
 
 
+
+//MIXIN
+
+@mixin jumboText{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 550px;
+    margin: 0;
+    bottom: 0;
+}
 @mixin mainText{
-   color: $lightGrey;
+   color: $darkPurple;
    font-family: $mainFont;
 }
 
@@ -21,20 +46,17 @@ $secondFont:'Cormorant Garamond', serif;
   display: flex;
   justify-content: space-around;
   padding: 0;
-  color: $lightGrey;
+  color: $darkPurple;
   a{
-    color: #777777;
+    color: $darkPurple;
     font-size: x-large;
     text-decoration: none;
-    &:visited{
-      color: $lightGrey;
-    }
   }
   ul{
     padding: 0;
     list-style: none;
-    height: 19em;
-    overflow: scroll;
+    height: 100%;
+    overflow: hidden;
   }
   h1{
     text-align: center;
@@ -42,7 +64,11 @@ $secondFont:'Cormorant Garamond', serif;
     margin: 5px;
   }
   p{
-    color: $lighterGrey;
+    color: $darkGreen;
+    width: 29em;
+    align-self: flex-end;
+    margin: 0;
+    text-align: right;
   }
 }
 
@@ -61,8 +87,8 @@ $secondFont:'Cormorant Garamond', serif;
 }
 
 @mixin about{
-  color: $lightGrey;
-  text-align: center;
+  color: $darkPurple;
+  //text-align: center;
   h1{
     font-size: 3.15em;
     margin-bottom: 10px;
@@ -75,81 +101,160 @@ $secondFont:'Cormorant Garamond', serif;
   }
 }
 
+a{
+  font-family: $mainFont;
+  text-decoration: none;
+  color: $darkGreen;
+}
+
+
+// BASE
+li{
+  list-style: circle;
+}
 nav {
-  text-align: center;
-  margin-top: 45px;
-  ul{
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    padding: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  li{
-    background-color: #ffffff;
-    padding: 0 23px;
-  }
-  a {
+  //margin-top: 43px;
+    padding-top: 15px;
+    height: 100%;
+    text-align: center;
+    background-color: #fff;
+  //<editor-fold desc="Description">
+    //padding-top: 25px;
+//  ul{
+//    display: flex;
+//    list-style: none;
+//    flex-direction: row;
+//    //padding: 0;
+//    justify-content: center;
+//    flex-wrap: wrap;
+//  }
+//  li{
+//    background-color: #ffffff;
+//    padding: 0 23px;
+//  }
+//  a {
+//    @include mainText;
+//    text-decoration: none;
+//    color: $darkPurple;
+//
+//}
+  //</editor-fold>
+}
+
+#sticky {
+  a{
     @include mainText;
     text-decoration: none;
+    padding: 0 23px;
+    font-size: 1.1em;
+    background-color: #fff;
+    margin: 0 -2px;
+    height: 3em;
+  }
+}
+
+#sticky-phantom {
+    visibility: hidden;
+    padding-top: 15px;
+}
+
+#sticky.stick {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+  height: 3em;
+}
+
+.shifted{
+  margin-top: 54px;
+}
+
+p{
+  @include mainText;
+}
+
+header{
+  section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6em;
+    div{
+      display: flex;
+      justify-content: center;
+      font-size: 2em;
+      align-items: center;
+    }
+  }
+  .plus{
+    color: $darkGreen;
+    margin: 0 8px;
+  }
 
 }
+
+.links{
+
 }
 
 .divider {
-  background-color: $borderColor;
-  height: 2px;
-  margin: -26px 15px 0;
+  //<editor-fold desc="Description">
+  //background-color: $borderColor;
+  //height: 2px;
+  //margin: -26px 15px 0;
+//</editor-fold>
+    margin: -12px 15px 0;
+    border-top: solid 2px #D8D8D8;
 }
 
 body {
-  margin: 50px;
-  border: solid $borderColor 2px;
+  margin: 0;
 }
 
 figure{
   width: 12em;
   height: 100%;
   margin: 0 auto;
-  margin-top: 6em;
 }
-
-svg{
-  width: 12em;
-}
-
 
 .contact{
   text-align: center;
-  color: $lightGrey;
-  //margin: 15px;
+  color: $darkPurple;
   border-top: solid 2px $borderColor;
   padding-top: 2em;
   margin: 25px 15px;
   li{
-    width: 11em;
+    width: 12em;
     font-size: larger;
+    list-style: none;
+    img{
+      width: 40%;
+      margin-bottom: 1em;
+    }
   }
   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    //align-items: center;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     h2{
-      color:$borderColor;
+      color: #447738;
     }
   }
   a{
-    color: #777777;
+    color: $darkPurple;
     text-decoration: none;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
   }
 
 }
-//END OF BASE
 
 .jumboWrapper {
     margin-bottom: .50em;
@@ -164,14 +269,11 @@ svg{
 }
 
 .homePhoto{
-  //background-image: url(../images/mount_hood-min.png);
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  //@include backgroundImg;
+  margin-top: 3em;
 }
 
 
-
+//HOME
 .bio{
   @include mainText;
   width: 84%;
@@ -188,10 +290,9 @@ svg{
 
 }
 
-
 main{
-  width: 85%;
-  margin: 100px auto 0;
+  width: 100%;
+  margin-top: 2em;
 }
 
 .bio{
@@ -204,25 +305,57 @@ main{
     }
 }}
 
-.textWrapper{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-height: 550px;
-    margin: 0;
-    bottom: 0;
-    .pageTitle{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      margin: 0;
-      font-size: 4.15em;
+.maryLink{
+  @include jumboText;
+    .textWrapper{
+      text-decoration: none;
     }
+    p {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 19em;
+  }
 }
 
+.pageTitle{
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      font-size: 4.15em;
+      color: $darkPurple;
+      margin-top: .25em;
+}
 //ABOUT PAGE
+
+
+
+.aboutImg{
+  background-image: url(../images/GC2_photo.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.aboutWrapper{
+  background-color: #fffcf0;
+  display: flex;
+  align-items: center;
+  div{
+    width: 46%;
+  }
+
+  p{
+    width: 601px;
+    font-size: 1.55em;
+  }
+}
+
+.serviceText{
+  @include jumboText;
+  text-align: center;
+  color: #fff;
+}
 
 .serviceAbout{
   margin-top: 3em;
@@ -240,8 +373,9 @@ main{
   }
   blockquote{
     font-size: 1.97em;
-    margin-bottom: 10px;
-    color: $lightGrey;
+    //margin-bottom: 10px;
+    color: $darkPurple;
+    margin: 0 0 10px;
   }
   @include about;
 }
@@ -252,18 +386,43 @@ main{
 }
 
 .miniAbout{
-  color: $lightGrey;
+  color: $darkPurple;
   font-family: $secondFont;
   width: 95%;
-  margin: 0 auto;
+  display: flex;
+  border-top: solid #e5e5e5 2px;
+  margin: 0 auto 3em;
+  flex-direction: row-reverse;
+  img{
+    height: 100%;
+    margin-top: -1px;
+  }
   p{
-    color: $lighterGrey;
+    color: $darkGreen;
     margin: 5px 0;
   }
   h1{
     margin: 0;
   }
+  a{
+    margin-top: 3em;
+  }
 
+}
+
+.story{
+    width: 90%;
+    margin: 0 auto;
+    border-top: solid #e5e5e5 2px;
+    font-family: $mainFont;
+  ul{
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+  }
+  li{
+    margin-bottom: 10px;
+  }
 }
 
 // RESOURCES
@@ -273,12 +432,53 @@ main{
   //background-image: url(../images/mount_hood-min.png);
 }
 
+.resourceHeader::before{
+  //display: flex;
+    display: inline-block;
+    width: 2rem;
+    content: "▶";
+    color: $darkGreen;
+    font-size: 28px;
+}
+
+.resourceHeader{
+    border-bottom: solid 1px #D8D8D8;
+}
+
+.openresource::before{
+    content: "▼";
+}
 
 .resourceWrapper {
   //flex-wrap: wrap;
   @include scroll;
+  flex-direction: column;
   li {
-    width: 17em;
+    //width: 17em;
+    //margin: 0 auto;
+    list-style: none;
+    width: 50%;
+    margin: 10px auto;
+    div{
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    display: block;
+  }
+  }
+  ul{
+    list-style: circle;
+    display: none;
+    li{
+      list-style: circle;
+      margin-bottom: 20px;
+    }
+  }
+  h1{
+    margin: 5px auto;
+    width: 26%;
+    text-align: left;
+    border: none;
   }
 
 }
@@ -288,30 +488,67 @@ main{
   li {
     //width: 20em;
     //  width: 19.45em;
-    width: 15.45em;
+    width: 85%;
+    list-style: none;
   }
   h1{
-    font-size: x-large;
+    font-size: 2.55em;
     margin-bottom: 14px;
     padding-bottom: 8px;
   }
   blockquote{
     margin: 0;
+    font-style: italic;
+    font-size: 1.50em;
   }
 }
 
+.hidden{
+  display: none;
+}
 
 .mainWrapper{
-  height: 20em;
-  margin-bottom: 4em;
+  //height: 20em;
+  //margin-bottom: 4em;
+  //height: 295px;
+  //height: 305px;
+  height: 268px;
+  //margin-bottom: 7em;
+  margin: 6em 0;
 
+  //TODO: Change
+  min-width: 875px;
+  //li{
+  //  background-image: url("../images/quotes.svg");
+  //  background-repeat: no-repeat;
+  //  background-position: top left;
+  //}
+  img{
+    width: 31px;
+    align-self: flex-start;
+    margin-right: 1em;
+  }
+   .testButton{
+     &{
+       cursor:pointer
+     }
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.secondWrapper{
+  li{
+    display: flex;
+    //margin: 4em;
+    //margin: 3em;
+    margin: 20px;
+    height: 104px;
+  }
 }
 
 //Testimonials
 
-.testimonialsWrapper{
-  //display: none;
-}
 
 //Services
 
@@ -319,7 +556,34 @@ main{
   list-style: none;
 }
 .services{
-  color: $lightGrey;
+  color: $darkPurple;
+  article{
+    font-size: 1.20em;
+    width: 82%;
+    margin: 0 auto;
+    a{
+      text-align: center;
+      width: 100%;
+      p{
+        color: #447738;
+        margin-bottom: 2em;
+      }
+    }
+    h2{
+      //margin: 2em;
+      margin: 2em 2em .5em;
+      font-family: $mainFont;
+    }
+    p{
+      width: 75%;
+      margin: 0 auto;
+    }
+    ul{
+      font-family: Futura, Trebuchet MS, Arial, sans-serif;
+      width: 26%;
+      margin: 2em auto;
+    }
+  }
   h1{
     text-align: center;
     font-size: 1.85em;
@@ -346,15 +610,16 @@ main{
 
   .pageTitle{
     font-size: 3em;
+    margin-top: 0;
   }}
   body{
-    //background-color: red;
     margin: 8px;
   }
-  //.mainWrapper{
-  //  margin-bottom: 4em;
-  //}
-
+  .maryLink{
+    p{
+      margin: 0;
+    }
+  }
 }
 
 @media only screen and (max-width: 560px){

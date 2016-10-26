@@ -3,12 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     <title>Glassman Coaching + Consulting</title>
     <link rel="icon" href="{% static 'images/gc2.ico'%}" type="image/x-icon" />
 </head>
 <body>
        <header>
+           <section>
+                <div>
+                    <p>Glassman Coaching</p> <p class="plus">+</p> <p>Consulting</p>
+               </div>
                <figure>
                    <a href="/">
                     <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -46,47 +51,57 @@
 </svg>
                    </a>
                </figure>
-           <nav>
-               <ul>
-                   <li><a href="/">Home</a></li>
-                   <li><a href="/services">Services</a></li>
-                   <li><a href="/testimonials">Testimonials</a></li>
-                   <li><a href="/about">About</a></li>
-                   <li><a href="/resources">Resources</a></li>
-               </ul>
-               <div class="divider"></div>
-           </nav>
+           </section>
+
+           <div id="content-anchor"></div>
+            <div id="sticky-phantom">This turns sticky</div>
+           <div id="sticky">
+                <nav>
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/services">Services</a>
+                        <a href="/testimonials">Testimonials</a>
+                        <a href="/resources">Resources</a>
+                    <!--</div>-->
+                    <div class="divider"></div>
+                <!--<ul id="sticky">-->
+                   <!--<li><a href="/">Home</a></li>-->
+                   <!--<li><a href="/about">About</a></li>-->
+                   <!--<li><a href="/services">Services</a></li>-->
+                   <!--<li><a href="/testimonials">Testimonials</a></li>-->
+                   <!--<li><a href="/resources">Resources</a></li>-->
+               <!--</ul>-->
+                <!--<div class="divider"></div>-->
+
+                </nav>
+           </div>
+           <!--</nav>-->
        </header>
 
     {% block content %}
     {% endblock content %}
 
    <footer class="contact">
-        <h1>
-            Contact me
-        </h1>
+        <!--<h1>-->
+            <!--Contact me-->
+        <!--</h1>-->
        <ul>
            <li>
-               <h2>
-                   Email
-               </h2>
-               <a href="#">
+               <a href="mailto:dina@glassmancoaching.com">
+                   <img src="{% static 'images/mailIcon.svg' %}" alt="Email Icon">
+               <!--<a href="mailto:dina@glassmancoaching.com">-->
                    dina@glassmancoaching.com
                </a>
            </li>
            <li>
-               <h2>
-                   Phone number
-               </h2>
-               <p>
-                   (123) 123 1234
-               </p>
+               <a href="tel:+15037031218">
+                   <img src="{% static 'images/numberIcon.svg' %}" alt="Phone number Icon">
+                   503.703.1218
+               </a>
            </li>
            <li>
-               <h2>
-                   LinkedIn
-               </h2>
                <a href="https://www.linkedin.com/in/dina-glassman-060b9250">
+                   <img src="{% static 'images/linkedInIcon.svg' %}" alt="LinkedIn Icon">
                    Dina Glassman
                </a>
            </li>
@@ -100,4 +115,7 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/fadein.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/stickynav.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
 </html>
