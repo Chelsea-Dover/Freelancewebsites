@@ -97,17 +97,12 @@ $secondFont:'Taviraj', serif;
 
 // BASE
 
-blockquote{
-  font-family: $mainFont;
-}
-
 body {
-  font-size: 18px;
+   font-size: 18px;
   font-family: $mainFont;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-   color: $darkPurple;
    line-height: 1.45;
 }
 
@@ -142,16 +137,17 @@ a{
 }
 
 #sticky-phantom {
-    visibility: hidden;
-    padding-top: 15px;
+  visibility: hidden;
+  padding-top: 4px;
+    //padding-top: 15px;
 }
 
 #sticky.stick {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    left: 0;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
   height: 3em;
 }
 
@@ -277,8 +273,7 @@ main{
       border-radius: 100px;
       min-width: 120px;
     }
-  }
-}
+}}
 
 .maryLink{
   top: 0;
@@ -592,6 +587,7 @@ main{
 }
 
 //Media queries
+
 @media only screen and (max-width: 700px){
   .contact li img {
     width: 30%;
