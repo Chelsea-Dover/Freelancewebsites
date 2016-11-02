@@ -12,7 +12,7 @@
        <header>
            <section>
                 <div>
-                    <p>Glassman Coaching</p> <p class="plus">+</p> <p>Consulting</p>
+                    <h1>Glassman Coaching</h1> <h1 class="plus">+</h1> <h1>Consulting</h1>
                </div>
                <figure>
                    <a href="/">
@@ -62,34 +62,20 @@
                         <a href="/services">Services</a>
                         <a href="/testimonials">Testimonials</a>
                         <a href="/resources">Resources</a>
-                    <!--</div>-->
                     <div class="divider"></div>
-                <!--<ul id="sticky">-->
-                   <!--<li><a href="/">Home</a></li>-->
-                   <!--<li><a href="/about">About</a></li>-->
-                   <!--<li><a href="/services">Services</a></li>-->
-                   <!--<li><a href="/testimonials">Testimonials</a></li>-->
-                   <!--<li><a href="/resources">Resources</a></li>-->
-               <!--</ul>-->
-                <!--<div class="divider"></div>-->
 
                 </nav>
            </div>
-           <!--</nav>-->
        </header>
 
     {% block content %}
     {% endblock content %}
 
    <footer class="contact">
-        <!--<h1>-->
-            <!--Contact me-->
-        <!--</h1>-->
        <ul>
            <li>
                <a href="mailto:dina@glassmancoaching.com">
                    <img src="{% static 'images/mailIcon.svg' %}" alt="Email Icon">
-               <!--<a href="mailto:dina@glassmancoaching.com">-->
                    dina@glassmancoaching.com
                </a>
            </li>
@@ -112,10 +98,15 @@
 
     {% endblock %}
 
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'js/FlowType.JS/flowtype.js' %}"></script>
+   <script type="text/javascript" src="{% static 'js/textSize.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/fadein.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/stickynav.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
 </body>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/fadein.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/stickynav.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
+
+
 </html>

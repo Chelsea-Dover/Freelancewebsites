@@ -1,9 +1,24 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Taviraj");
-a {
-  font-family: Futura, Trebuchet MS, Arial, sans-serif;
-  text-decoration: none;
-  color: #447738; }
+blockquote {
+  font-family: Futura, Trebuchet MS, Arial, sans-serif; }
+
+body {
+  font-size: 18px;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #4d335a;
+  line-height: 1.45; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 3em; }
+
+h3 {
+  font-size: 2em; }
 
 li {
   list-style: circle; }
@@ -14,14 +29,17 @@ nav {
   text-align: center;
   background-color: #fff; }
 
+a {
+  text-decoration: none;
+  color: #447738; }
+
 #sticky a {
   color: #4d335a;
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   text-decoration: none;
   padding: 0 23px;
-  font-size: 1.1em;
   background-color: #fff;
-  margin: 0 -2px;
+  margin: 0 -4px;
   height: 3em; }
 
 #sticky-phantom {
@@ -46,12 +64,10 @@ p {
 header section {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  margin-top: 6em; }
+  flex-direction: column; }
   header section div {
     display: flex;
     justify-content: center;
-    font-size: 2em;
     align-items: center; }
 header .plus {
   color: #447738;
@@ -77,7 +93,6 @@ figure {
   margin: 25px 15px; }
   .contact li {
     width: 12em;
-    font-size: larger;
     list-style: none; }
     .contact li img {
       width: 40%;
@@ -99,9 +114,10 @@ figure {
     align-items: center; }
 
 .jumboWrapper {
-  margin-bottom: .50em;
   opacity: 0;
-  position: relative; }
+  position: relative;
+  height: 100%;
+  max-height: 550px; }
   .jumboWrapper img {
     width: 100%;
     height: 100%;
@@ -136,10 +152,12 @@ main {
     min-width: 120px; }
 
 .maryLink {
+  top: 0;
+  text-align: center;
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 38%;
   max-height: 550px;
   margin: 0;
   bottom: 0; }
@@ -150,16 +168,31 @@ main {
     justify-content: flex-end;
     margin: 0 19em; }
 
+.HeaderText {
+  color: #4d335a;
+  top: 30%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 38%;
+  max-height: 550px;
+  margin: 0;
+  bottom: 0; }
+
 .pageTitle {
+  font-style: italic;
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 4.15em;
   color: #4d335a;
   margin-top: .25em; }
 
+.diversity img {
+  width: 100%; }
+
 .aboutImg {
-  background-image: url(../images/GC2_photo.png);
+  background-image: url(../images/Glassman_min.jpg);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -171,14 +204,13 @@ main {
   .aboutWrapper div {
     width: 46%; }
   .aboutWrapper p {
-    width: 601px;
-    font-size: 1.55em; }
+    width: 601px; }
 
 .serviceText {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 38%;
   max-height: 550px;
   margin: 0;
   bottom: 0;
@@ -193,26 +225,17 @@ main {
     margin: auto;
     text-align: left; }
   .serviceAbout h1 {
-    font-size: 3.15em;
     margin-bottom: 10px; }
-  .serviceAbout article p {
-    line-height: 1.5em;
-    font-size: 1.15em; }
 
 .aboutPage {
   color: #4d335a; }
   .aboutPage a {
     text-decoration: none; }
   .aboutPage blockquote {
-    font-size: 1.97em;
     color: #4d335a;
     margin: 0 0 10px; }
   .aboutPage h1 {
-    font-size: 3.15em;
     margin-bottom: 10px; }
-  .aboutPage article p {
-    line-height: 1.5em;
-    font-size: 1.15em; }
 
 .aboutPhoto {
   color: #fff;
@@ -226,14 +249,13 @@ main {
   background-size: cover;
   background-position: center;
   text-align: center;
-  background-image: url(../images/mount_hood-min.png); }
+  background-image: url(../images/Glassman_min.jpg); }
 
 .miniAbout {
   color: #4d335a;
   font-family: "Taviraj", serif;
   width: 95%;
   display: flex;
-  border-top: solid #e5e5e5 2px;
   margin: 0 auto 3em;
   flex-direction: row-reverse; }
   .miniAbout img {
@@ -248,16 +270,34 @@ main {
     margin-top: 3em; }
 
 .story {
-  width: 90%;
-  margin: 0 auto;
-  border-top: solid #e5e5e5 2px;
-  font-family: Futura, Trebuchet MS, Arial, sans-serif; }
+  margin: 0 auto; }
   .story ul {
     text-align: left;
     margin: 0 auto;
     width: 80%; }
   .story li {
     margin-bottom: 10px; }
+
+.p_img {
+  border-top: solid #e5e5e5 2px;
+  border-bottom: solid #e5e5e5 2px;
+  display: flex;
+  text-align: center;
+  align-items: center; }
+  .p_img span {
+    margin: 0 2em; }
+  .p_img img {
+    width: 50%;
+    filter: grayscale(100%);
+    -webkit-transition: filter 1s;
+    /* Safari */
+    transition: filter 1s; }
+    .p_img img:hover {
+      filter: grayscale(0%); }
+
+.aboutBackground {
+  width: 90%;
+  margin: 0 auto; }
 
 .resourcePhoto {
   color: #fff;
@@ -274,16 +314,21 @@ main {
 
 .resourceHeader::before {
   display: inline-block;
-  width: 2rem;
-  content: "▶";
   color: #447738;
-  font-size: 28px; }
+  content: "▶"; }
+
+.openresource::before, .opencoachingHeader::before {
+  content: "▼";
+  display: inline-block;
+  color: #447738; }
+
+.coachingHeader::before {
+  content: "▶"; }
 
 .resourceHeader {
-  border-bottom: solid 1px #D8D8D8; }
-
-.openresource::before {
-  content: "▼"; }
+  margin: 5px auto;
+  width: 35%;
+  min-width: 200px; }
 
 .resourceWrapper {
   flex-wrap: wrap;
@@ -293,15 +338,16 @@ main {
   justify-content: space-around;
   padding: 0;
   color: #4d335a;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-left: 5%; }
+  .resourceWrapper li {
+    list-style: none; }
   .resourceWrapper a {
     color: #4d335a;
-    font-size: x-large;
     text-decoration: none; }
   .resourceWrapper ul {
     padding: 0;
     list-style: none;
-    height: 100%;
     overflow: hidden; }
   .resourceWrapper h1 {
     text-align: center;
@@ -314,7 +360,6 @@ main {
     margin: 0;
     text-align: right; }
   .resourceWrapper li {
-    list-style: none;
     width: 50%;
     margin: 10px auto; }
     .resourceWrapper li div {
@@ -328,11 +373,6 @@ main {
     .resourceWrapper ul li {
       list-style: circle;
       margin-bottom: 20px; }
-  .resourceWrapper h1 {
-    margin: 5px auto;
-    width: 26%;
-    text-align: left;
-    border: none; }
 
 .testimonialsWrapper {
   flex-wrap: wrap;
@@ -342,14 +382,14 @@ main {
   justify-content: space-around;
   padding: 0;
   color: #4d335a; }
+  .testimonialsWrapper li {
+    list-style: none; }
   .testimonialsWrapper a {
     color: #4d335a;
-    font-size: x-large;
     text-decoration: none; }
   .testimonialsWrapper ul {
     padding: 0;
     list-style: none;
-    height: 100%;
     overflow: hidden; }
   .testimonialsWrapper h1 {
     text-align: center;
@@ -362,24 +402,20 @@ main {
     margin: 0;
     text-align: right; }
   .testimonialsWrapper li {
-    width: 85%;
-    list-style: none; }
+    width: 85%; }
   .testimonialsWrapper h1 {
-    font-size: 2.55em;
     margin-bottom: 14px;
     padding-bottom: 8px; }
   .testimonialsWrapper blockquote {
     margin: 0;
     font-style: italic;
-    font-size: 1.50em; }
-
-.hidden {
-  display: none; }
+    width: 100%;
+    flex-basis: 80%; }
+  .testimonialsWrapper p {
+    flex-basis: 100%; }
 
 .mainWrapper {
-  height: 268px;
-  margin: 6em 0;
-  min-width: 875px; }
+  margin: 6em 0; }
   .mainWrapper img {
     width: 31px;
     align-self: flex-start;
@@ -393,7 +429,7 @@ main {
 .secondWrapper li {
   display: flex;
   margin: 20px;
-  height: 104px; }
+  flex-wrap: wrap; }
 
 .servicesHeader {
   list-style: none; }
@@ -401,7 +437,6 @@ main {
 .services {
   color: #4d335a; }
   .services article {
-    font-size: 1.20em;
     width: 82%;
     margin: 0 auto; }
     .services article a {
@@ -410,41 +445,53 @@ main {
       .services article a p {
         color: #447738;
         margin-bottom: 2em; }
-    .services article h2 {
-      margin: 2em 2em .5em;
-      font-family: Futura, Trebuchet MS, Arial, sans-serif; }
+    .services article h2, .services article h3 {
+      margin: 2em 2em .5em; }
     .services article p {
       width: 75%;
       margin: 0 auto; }
     .services article ul {
       font-family: Futura, Trebuchet MS, Arial, sans-serif;
-      width: 26%;
+      width: 50%;
       margin: 2em auto; }
   .services h1 {
     text-align: center;
-    font-size: 1.85em;
-    width: 82%;
-    margin: 1em auto 2em; }
+    border-bottom: solid 1px #D8D8D8; }
   .services ul ul {
     list-style-type: disc; }
 
 .servicesList li {
   margin-bottom: 10px; }
 
-@media only screen and (max-width: 700px) {
-  .textWrapper .pageTitle {
-    font-size: 3em;
-    margin-top: 0; }
+.listWrapper {
+  list-style: none; }
+  .listWrapper h2 {
+    margin-left: 0; }
+  .listWrapper p {
+    margin-left: 1em; }
 
-  body {
-    margin: 8px; }
+.servicesReadMore {
+  width: 100%; }
+
+.hidden {
+  display: none !important; }
+
+@media only screen and (max-width: 700px) {
+  .contact li img {
+    width: 30%; }
+
+  .miniAbout img {
+    display: none; }
+
+  .p_img {
+    display: block; }
+    .p_img img {
+      width: 100%; }
 
   .maryLink p {
     margin: 0; } }
 @media only screen and (max-width: 560px) {
   .divider {
     margin: -41px 15px 0; } }
-.diversity img {
-  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
