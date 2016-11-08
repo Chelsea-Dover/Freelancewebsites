@@ -11,8 +11,8 @@
 <body>
        <header>
            <section>
-                <div>
-                    <h1>Glassman Coaching</h1> <h1 class="plus">+</h1> <h1>Consulting</h1>
+                <div class="glassmanHeader">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1077.11 78.16"><defs><style>.cls-1{font-size:72px;fill:#4d335a;}.cls-1,.cls-4{font-family:Futura-Medium, Futura;}.cls-2{letter-spacing:0.03em;}.cls-3,.cls-4{fill:#447738;font-size:75px;}</style></defs><title>GC2TextHeader</title><text class="cls-1" transform="translate(-3.53 59.47)">Glassman Coa<tspan class="cls-2" x="478.9" y="0">c</tspan><tspan x="515.07" y="0">hing </tspan><tspan class="cls-3" x="677.29" y="0" xml:space="preserve">  </tspan><tspan x="723.57" y="0" xml:space="preserve"> Consulting</tspan></text><text class="cls-4" transform="translate(674.3 68.15)">+</text></svg>
                </div>
                <figure>
                    <a href="/">
@@ -56,16 +56,43 @@
            <div id="content-anchor"></div>
             <div id="sticky-phantom">This turns sticky</div>
            <div id="sticky">
-               <!--Bloop-->
-                <nav>
-                        <a href="/">Home</a>
-                        <a href="/about">About</a>
-                        <a href="/services">Services</a>
-                        <a href="/testimonials">Testimonials</a>
-                        <a href="/resources">Resources</a>
-                    <div class="divider"></div>
+               <div class="mobileMenu">
+                    <ul>
+                        <li><a class="mobileLink" href="/">Home</a></li>
+                        <li><a class="mobileLink" href="/about">About</a></li>
+                        <li><a class="mobileLink" href="/services">Services</a></li>
+                        <li><a class="mobileLink" href="/testimonials">Testimonials</a></li>
+                        <li><a class="mobileLink" href="/resources">Resources</a></li>
+                    </ul>
+               </div>
+               <div class="mobileBodyWrapper">
+                   <div class="mobileDimmer"></div>
+                   <header class="header">
+                        <div id="header" class="menuIcon">
+                            <a class="mobileHeader" href="#menuExpand">
+                                Menu
+                            </a>
+                            <div class="divider"></div>
+                        </div>
+                        <nav class="menu">
+                            <a class="navLink" href="/">Home</a>
+                            <a class="navLink" href="/about">About</a>
+                            <a class="navLink" href="/services">Services</a>
+                            <a class="navLink" href="/testimonials">Testimonials</a>
+                            <a class="navLink" href="/resources">Resources</a>
+                            <div class="divider"></div>
+                        </nav>
+                    </header>
+                </div>
+                <!--<nav>-->
+                        <!--<a class="navLink" href="/">Home</a>-->
+                        <!--<a class="navLink" href="/about">About</a>-->
+                        <!--<a class="navLink" href="/services">Services</a>-->
+                        <!--<a class="navLink" href="/testimonials">Testimonials</a>-->
+                        <!--<a class="navLink" href="/resources">Resources</a>-->
+                    <!--<div class="divider"></div>-->
 
-                </nav>
+                <!--</nav>-->
            </div>
        </header>
 
@@ -102,6 +129,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="{% static 'js/FlowType.JS/flowtype.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/hamMenu.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/textSize.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/fadein.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/stickynav.js' %}"></script>

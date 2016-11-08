@@ -4,34 +4,47 @@
     {% load staticfiles %}
     <main class="aboutPage">
 
-        <section class="jumboWrapper homePhoto">
-            <!--<div class="jumbotron">-->
-                <img src="{% static 'images/Nature_Path.jpg'%}">
+        <!--<section class="jumboWrapper homePhoto">-->
+                <!--<img src="{% static 'images/Nature_Path.jpg'%}">-->
+            <!--<div class="HeaderText">-->
+                <!--<h1>-->
+                <!--About Dina-->
+                <!--</h1>-->
             <!--</div>-->
-            <div class="HeaderText">
-                <h1>
-                About Dina
-                </h1>
-            </div>
+        <!--</section>-->
+
+        <section class="miniAbout2">
+            <p>
+                As an integral coach, I approach every individual client with a curious mind, open perspective,
+                and no pre-determined agenda.  Integral coaching includes every aspect of the client and their
+                world - what clients experience now as well as their potential.
+                Through coaching, we explore how clients represent themselves, investigate their social world,
+                habits, their quality of self-care, and the amount of attention and energy available to take on
+                change.
+            </p>
         </section>
 
         <article class="story">
             <section class="p_img">
                 <span>
-                    <h1>
-                        Dina's story
-                    </h1>
+                    <div class="backgroundHeader">
+                        <h1>
+                            Dina's story
+                        </h1>
+                    </div>
                     <p>
-                        Dina is passionate about coaching professionals at various stages of positive transition and change,
-                        including career shifts, transitions from leave, and other professional milestones.
-                        Her own career transitions have included moving cross-country to join Perkins Coie as a lateral labor
-                        and employment associate, being the first professional in the Portland office to transition to a reduced
-                        hours schedule, leaving the practice of law to become the first Director of Professional Development
-                        in the Portland market, and then transitioning to the position she created as an internal career coach.
-                        For almost two decades,
-                        Dina has also spoken widely on a host of professional development and diversity topics.
-                        In Dina’s final year at Perkins Coie,
-                        she was honored to receive the firm’s inaugural Diversity Champion Award.
+                        With nearly 20 years of corporate experience to guide me, I am passionate about coaching
+                        professionals at various stages of positive transition and change, including career shifts,
+                        transitions from leave, and other professional milestones. My own career transitions have included
+                        moving cross-country to join Perkins Coie as a lateral labor and employment associate, being the
+                        first professional in the Portland office to transition to a reduced hours schedule, leaving the
+                        practice of law to become the first Director of Professional Development in the Portland market,
+                        and then transitioning to the position I created as an internal career coach.
+                        For almost two decades, I have spoken widely on a host of professional development and
+                        diversity topics.  During this time, I developed and facilitated diversity roundtable
+                        discussions with dozens of professionals, creating a safe space to surface sensitive but
+                        crucial diversity issues.  In my final year at Perkins Coie, I was honored to receive the
+                        firm’s inaugural Diversity Champion Award.
                     </p>
                 </span>
             <img src="{% static 'images/Glassman_min.jpg'%}">
@@ -56,8 +69,12 @@
                 </a>
             </aside>
 
-            <section class="p_img">
+            <aside class="familyPhotos">
                 <img src="{% static 'images/GC2_photo.png'%}">
+                <img src="{% static 'images/GC2_photo2.jpg'%}">
+            </aside>
+
+            <section class="p_img">
                 <span>
                     <p>
                         Dina immigrated to the United States from Azerbaijan in 1981 and is an avid world traveler.
@@ -69,28 +86,35 @@
             </section>
 
 
-            <section class="aboutBackground">
-                <h2>
-                    Additional Background and Experience:
-                </h2>
-                <ul>
-                    <li>JD from NYU Law School; BA from Colgate University, phi beta kappa, magna cum laude</li>
-                    <li>Coaching Certification from New Ventures West, ICF Certified Coach</li>
-                    <li>MBSR (Mindfulness Based Stress Reduction) program graduate – 2016 (OHSU)</li>
-                    <li>19 years inside Big Law (AmLaw 50 firms); DLA Piper and Perkins Coie</li>
-                    <li>7 years litigation practice experience at DLA and Perkins Coie; first lawyer to work a reduced schedule in the Portland office of Perkins Coie</li>
-                    <li>10+ years of Big Firm Attorney Development experience,
-                        including 5 years as Director of Attorney Development at Perkins Coie (developed the job description,
-                        which remains the most senior attorney development role in the firm)</li>
-                    <li>4 years as internal Attorney Career Coach,
-                        including experience coaching 100+ individual lawyers,
-                        across all seniority levels, 14 geographic locations and 8 practice groups
-                        (developed the job description for the role, one of the first designated internal law
-                        firm coaching roles in the country)</li>
-                    <li>Recipient of Perkins Coie’s inaugural Firmwide Diversity Champion Award</li>
-                    <li>Co-founder of Internal Coaching Peer Group, including more than a dozen coaching professionals inside Big Law</li>
-                    <li>Longstanding member of Professional Development Consortium (PDC)</li>
-                </ul>
+            <section class="p_img">
+                <!--<img src="{% static 'images/GC2_photo.png'%}">-->
+                <!--<span>-->
+                <section class="aboutBackground">
+                    <div class="backgroundHeader">
+                        <h2>
+                            Additional Background and Experience:
+                        </h2>
+                    </div>
+                        <ul>
+                            <li>JD from NYU Law School; BA from Colgate University, phi beta kappa, magna cum laude</li>
+                            <li>Coaching Certification from New Ventures West, ICF Certified Coach</li>
+                            <li>MBSR (Mindfulness Based Stress Reduction) program graduate – 2016 (OHSU)</li>
+                            <li>19 years inside Big Law (AmLaw 50 firms); DLA Piper and Perkins Coie</li>
+                            <li>7 years litigation practice experience at DLA and Perkins Coie; first lawyer to work a reduced schedule in the Portland office of Perkins Coie</li>
+                            <li>10+ years of Big Firm Attorney Development experience,
+                                including 5 years as Director of Attorney Development at Perkins Coie (developed the job description,
+                                which remains the most senior attorney development role in the firm)</li>
+                            <li>4 years as internal Attorney Career Coach,
+                                including experience coaching 100+ individual lawyers,
+                                across all seniority levels, 14 geographic locations and 8 practice groups
+                                (developed the job description for the role, one of the first designated internal law
+                                firm coaching roles in the country)</li>
+                            <li>Recipient of Perkins Coie’s inaugural Firmwide Diversity Champion Award</li>
+                            <li>Co-founder of Internal Coaching Peer Group, including more than a dozen coaching professionals inside Big Law</li>
+                            <li>Longstanding member of Professional Development Consortium (PDC)</li>
+                        </ul>
+                </section>
+                <!--</span>-->
             </section>
         </article>
 

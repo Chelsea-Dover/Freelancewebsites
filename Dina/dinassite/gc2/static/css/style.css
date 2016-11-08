@@ -1,7 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Taviraj");
+.backgroundHeader {
+  height: 3em;
+  background-image: url(https://visualhunt.com/photos/m/1/rice-field-green-grass-nature-plant-natural.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid #e5e5e5 2px; }
+  .backgroundHeader h1, .backgroundHeader h2 {
+    margin: 0; }
+
+.glassmanHeader svg {
+  width: 62%;
+  margin: 20px; }
+
 body {
   font-size: 18px;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  color: #4d335a; }
+
+blockquote {
   font-family: Futura, Trebuchet MS, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -25,22 +43,27 @@ nav {
   text-align: center;
   background-color: #fff; }
 
+.header {
+  background-color: #fff; }
+
 a {
   text-decoration: none;
   color: #447738; }
 
-#sticky a {
-  color: #4d335a;
-  font-family: Futura, Trebuchet MS, Arial, sans-serif;
-  text-decoration: none;
-  padding: 0 23px;
-  background-color: #fff;
-  margin: 0 -4px;
-  height: 3em; }
+#sticky {
+  background-color: #fff; }
+  #sticky a {
+    color: #4d335a;
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    text-decoration: none;
+    padding: 0 23px;
+    background-color: #fff;
+    margin: 0 -4px;
+    height: 3em; }
 
 #sticky-phantom {
   visibility: hidden;
-  padding-top: 4px; }
+  padding-top: 1em; }
 
 #sticky.stick {
   z-index: 100;
@@ -48,7 +71,7 @@ a {
   top: 0;
   width: 100%;
   left: 0;
-  height: 3em; }
+  height: 4em; }
 
 .shifted {
   margin-top: 54px; }
@@ -64,7 +87,8 @@ header section {
   header section div {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
 header .plus {
   color: #447738;
   margin: 0 8px; }
@@ -86,9 +110,9 @@ figure {
   color: #4d335a;
   border-top: solid 2px #D8D8D8;
   padding-top: 2em;
-  margin: 25px 15px; }
+  margin: -7px 25px 15px; }
   .contact li {
-    width: 12em;
+    width: 16em;
     list-style: none; }
     .contact li img {
       width: 40%;
@@ -110,6 +134,7 @@ figure {
     align-items: center; }
 
 .jumboWrapper {
+  margin-top: 2em;
   opacity: 0;
   position: relative;
   height: 100%;
@@ -119,14 +144,11 @@ figure {
     height: 100%;
     max-height: 550px; }
 
-.homePhoto {
-  margin-top: 3em; }
-
 .bio {
   color: #4d335a;
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   width: 84%;
-  margin: 5em auto;
+  margin: 0 auto;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -165,7 +187,7 @@ main {
     margin: 0 19em; }
 
 .HeaderText {
-  color: #4d335a;
+  color: #fff;
   top: 30%;
   text-align: center;
   position: absolute;
@@ -183,6 +205,19 @@ main {
   margin: 0;
   color: #4d335a;
   margin-top: .25em; }
+
+.familyPhotos {
+  display: flex; }
+  .familyPhotos img {
+    width: 27%;
+    filter: grayscale(100%);
+    -webkit-transition: filter 1s;
+    /* Safari */
+    transition: filter 1s;
+    width: 50%;
+    height: 50%; }
+    .familyPhotos img:hover {
+      filter: grayscale(0%); }
 
 .diversity img {
   width: 100%; }
@@ -247,12 +282,15 @@ main {
   text-align: center;
   background-image: url(../images/Glassman_min.jpg); }
 
-.miniAbout {
-  color: #4d335a;
-  font-family: "Taviraj", serif;
+.miniAbout2 {
   width: 95%;
-  display: flex;
+  margin: 0 auto 3em; }
+
+.miniAbout {
+  width: 95%;
   margin: 0 auto 3em;
+  color: #4d335a;
+  display: flex;
   flex-direction: row-reverse; }
   .miniAbout img {
     height: 100%;
@@ -263,7 +301,7 @@ main {
   .miniAbout h1 {
     margin: 0; }
   .miniAbout a {
-    margin-top: 3em; }
+    margin-top: 1em; }
 
 .story {
   margin: 0 auto; }
@@ -274,16 +312,18 @@ main {
   .story li {
     margin-bottom: 10px; }
 
+.miniAbout, .familyPhotos, .p_img {
+  border-top: solid #e5e5e5 2px; }
+
 .p_img {
   border-top: solid #e5e5e5 2px;
-  border-bottom: solid #e5e5e5 2px;
   display: flex;
   text-align: center;
   align-items: center; }
   .p_img span {
     margin: 0 2em; }
   .p_img img {
-    width: 50%;
+    width: 27%;
     filter: grayscale(100%);
     -webkit-transition: filter 1s;
     /* Safari */
@@ -293,7 +333,7 @@ main {
 
 .aboutBackground {
   width: 90%;
-  margin: 0 auto; }
+  margin: 1em auto 0; }
 
 .resourcePhoto {
   color: #fff;
@@ -411,14 +451,17 @@ main {
     flex-basis: 100%; }
 
 .mainWrapper {
-  margin: 6em 0; }
+  margin: 1em 0; }
+  .mainWrapper h1 {
+    color: #447738; }
   .mainWrapper img {
     width: 31px;
     align-self: flex-start;
     margin-right: 1em; }
   .mainWrapper .testButton {
     text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
     .mainWrapper .testButton {
       cursor: pointer; }
 
@@ -439,6 +482,7 @@ main {
       text-align: center;
       width: 100%; }
       .services article a p {
+        width: 75%;
         color: #447738;
         margin-bottom: 2em; }
     .services article h2, .services article h3 {
@@ -449,7 +493,7 @@ main {
     .services article ul {
       font-family: Futura, Trebuchet MS, Arial, sans-serif;
       width: 50%;
-      margin: 2em auto; }
+      margin: 1em auto; }
   .services h1 {
     text-align: center;
     border-bottom: solid 1px #D8D8D8; }
@@ -469,10 +513,17 @@ main {
 .servicesReadMore {
   width: 100%; }
 
+.offerings {
+  width: 83%;
+  margin: auto; }
+
 .hidden {
   display: none !important; }
 
 @media only screen and (max-width: 700px) {
+  .glassmanHeader svg {
+    width: 93%; }
+
   .contact li img {
     width: 30%; }
 
@@ -486,8 +537,83 @@ main {
 
   .maryLink p {
     margin: 0; } }
-@media only screen and (max-width: 560px) {
-  .divider {
-    margin: -41px 15px 0; } }
+.header .menuIcon {
+  display: none; }
+.header .menu {
+  position: relative; }
+  .header .menu ul {
+    padding: 0;
+    margin: 0; }
+    .header .menu ul li {
+      position: relative;
+      display: inline-block;
+      padding: 0;
+      list-style: none; }
+
+.mobileMenu {
+  display: none;
+  width: 50%;
+  position: absolute;
+  margin-left: -100%;
+  top: 0;
+  z-index: 2; }
+  .mobileMenu ul {
+    margin: 2em 0;
+    padding: 0; }
+    .mobileMenu ul li {
+      list-style: none;
+      margin: 0; }
+      .mobileMenu ul li a {
+        display: block; }
+        .mobileMenu ul li a:hover, .mobileMenu ul li a:active {
+          background-color: #999; }
+
+.mobileBodyWrapper .mobileDimmer {
+  left: 50%;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.45);
+  cursor: pointer; }
+
+@media only screen and (max-width: 780px) {
+  #sticky {
+    background-color: transparent; }
+    #sticky a {
+      height: 2em; }
+
+  .header .menuIcon {
+    text-align: center;
+    display: block;
+    width: 100%; }
+    .header .menuIcon a {
+      display: inline-block;
+      padding: 15px; }
+  .header .menu {
+    max-height: 0;
+    overflow: hidden; }
+
+  .mobileBodyWrapper.menuOpen {
+    left: 50%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1000; }
+
+  .mobileMenu.menuOpen {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    display: block;
+    top: 0;
+    margin-left: 0;
+    z-index: 1;
+    width: 50%;
+    bottom: 0;
+    background-color: #fff; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,15 +15,13 @@ $borderColor: #D8D8D8;
 $secondFont:'Taviraj', serif;
 
 
-
 //MIXIN
-
-@mixin toggleTri{
+@mixin toggleTri {
   display: inline-block;
   color: $darkGreen;
 }
 
-@mixin jumboText{
+@mixin jumboText {
     position: absolute;
     left: 0;
     width: 100%;
@@ -33,13 +31,13 @@ $secondFont:'Taviraj', serif;
     bottom: 0;
 }
 
-@mixin mainText{
+@mixin mainText {
    color: $darkPurple;
    font-family: $mainFont;
 }
 
-@mixin scroll{
-  li{
+@mixin scroll {
+  li {
     list-style: none;
   }
   flex-wrap: wrap;
@@ -49,22 +47,22 @@ $secondFont:'Taviraj', serif;
   justify-content: space-around;
   padding: 0;
   color: $darkPurple;
-  a{
+  a {
     color: $darkPurple;
     text-decoration: none;
   }
-  ul{
+  ul {
     padding: 0;
     list-style: none;
     overflow: hidden;
   }
-  h1{
+  h1 {
     text-align: center;
     border-bottom: solid 1px $borderColor;
     margin: 5px;
   }
 
-  p{
+  p {
     color: $darkGreen;
     width: 29em;
     align-self: flex-end;
@@ -73,7 +71,7 @@ $secondFont:'Taviraj', serif;
   }
 }
 
-@mixin backgroundImg{
+@mixin backgroundImg {
   color: #fff;
   font-family: $mainFont;
   display: flex;
@@ -87,46 +85,98 @@ $secondFont:'Taviraj', serif;
   text-align: center;
 }
 
-@mixin about{
+@mixin about {
   color: $darkPurple;
-  h1{
+  h1 {
     margin-bottom: 10px;
   }
 }
 
+@mixin aboutPhotos {
+  width: 27%;
+  filter: grayscale(100%);
+  -webkit-transition: filter 1s; /* Safari */
+  transition: filter 1s;
+    &:hover {
+      filter: grayscale(0%);
+
+    }
+}
+
+@mixin smallP {
+  width: 95%;
+  margin: 0 auto 3em;
+}
 
 // BASE
+.backgroundHeader {
+    height: 3em;
+    background-image: url(https://visualhunt.com/photos/m/1/rice-field-green-grass-nature-plant-natural.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: solid #e5e5e5 2px;
+  h1, h2 {
+    margin: 0;
+  }
+}
+
+.glassmanHeader {
+  svg {
+    width: 62%;
+    margin: 20px;
+  }
+}
 
 body {
-   font-size: 18px;
+  font-size: 18px;
+  font-family: $mainFont;
+  color: $darkPurple;
+}
+
+blockquote {
   font-family: $mainFont;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-   line-height: 1.45;
+ line-height: 1.45;
 }
 
-h1 { font-size: 4em; }
-h2 { font-size: 3em; }
-h3 { font-size: 2em; }
+h1 {
+  font-size: 4em;
+}
 
-li{
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+li {
   list-style: circle;
 }
+
 nav {
-    padding-top: 15px;
-    height: 100%;
-    text-align: center;
-    background-color: #fff;
+  padding-top: 15px;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
 }
 
-a{
+.header {
+  background-color: #fff;
+}
+
+a {
   text-decoration: none;
   color: $darkGreen;
 }
 
 #sticky {
-  a{
+  background-color: #fff;
+  a {
     @include mainText;
     text-decoration: none;
     padding: 0 23px;
@@ -138,8 +188,8 @@ a{
 
 #sticky-phantom {
   visibility: hidden;
-  padding-top: 4px;
-    //padding-top: 15px;
+  //padding-top: 4px;
+  padding-top: 1em;
 }
 
 #sticky.stick {
@@ -148,29 +198,30 @@ a{
   top: 0;
   width: 100%;
   left: 0;
-  height: 3em;
+  height: 4em;
 }
 
-.shifted{
+.shifted {
   margin-top: 54px;
 }
 
-p{
+p {
   @include mainText;
 }
 
-header{
-  section{
+header {
+  section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    div{
+    div {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
   }
-  .plus{
+  .plus {
     color: $darkGreen;
     margin: 0 8px;
   }
@@ -185,22 +236,23 @@ body {
   margin: 0;
 }
 
-figure{
+figure {
   width: 12em;
   height: 100%;
   margin: 0 auto;
 }
 
-.contact{
+.contact {
   text-align: center;
   color: $darkPurple;
   border-top: solid 2px $borderColor;
   padding-top: 2em;
-  margin: 25px 15px;
-  li{
-    width: 12em;
+  //margin: 25px 15px;
+  margin: -7px 25px 15px;
+  li {
+    width: 16em;
     list-style: none;
-    img{
+    img {
       width: 40%;
       margin-bottom: 1em;
     }
@@ -212,11 +264,11 @@ figure{
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    h2{
+    h2 {
       color: #447738;
     }
   }
-  a{
+  a {
     color: $darkPurple;
     text-decoration: none;
 
@@ -228,58 +280,59 @@ figure{
 }
 
 .jumboWrapper {
+    margin-top: 2em;
     opacity: 0;
     position: relative;
     height: 100%;
     max-height: 550px;
-    img{
+    img {
         width: 100%;
         height: 100%;
         max-height: 550px;
     }
 }
 
-.homePhoto{
-  margin-top: 3em;
-}
+//.homePhoto {
+//  margin-top: 3em;
+//}
 
 //HOME
-.bio{
+.bio {
   @include mainText;
   width: 84%;
-  margin: 5em auto;
+  margin: 0 auto;
   align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  article{
+  article {
     width: 45em;
     text-align: center;
   }
 
 }
 
-main{
+main {
   width: 100%;
   margin-top: 2em;
 }
 
-.bio{
-  aside{
+.bio {
+  aside {
     width: 10em;
-    img{
+    img {
       width: 100%;
       border-radius: 100px;
       min-width: 120px;
     }
 }}
 
-.maryLink{
+.maryLink {
   top: 0;
   text-align: center;
   @include jumboText;
-    .textWrapper{
+    .textWrapper {
       text-decoration: none;
     }
     p {
@@ -289,14 +342,15 @@ main{
   }
 }
 
-.HeaderText{
-  color: #4d335a;
+.HeaderText {
+  //color: #4d335a;
+  color: #fff;
   top: 30%;
   text-align: center;
   @include  jumboText;
 }
 
-.pageTitle{
+.pageTitle {
   font-style: italic;
   display: flex;
   justify-content: center;
@@ -306,39 +360,49 @@ main{
 }
 
 //ABOUT PAGE
-.diversity{
+
+.familyPhotos {
+  display: flex;
+  img {
+    @include aboutPhotos;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.diversity {
   img {
     width: 100%;
   }
 }
 
-.aboutImg{
+.aboutImg {
   background-image: url(../images/Glassman_min.jpg);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.aboutWrapper{
+.aboutWrapper {
   background-color: #fffcf0;
   display: flex;
   align-items: center;
-  div{
+  div {
     width: 46%;
   }
 
-  p{
+  p {
     width: 601px;
   }
 }
 
-.serviceText{
+.serviceText {
   @include jumboText;
   text-align: center;
   color: #fff;
 }
 
-.serviceAbout{
+.serviceAbout {
   margin-top: 3em;
   ul {
       width: 22%;
@@ -348,90 +412,90 @@ main{
   @include about;
 }
 
-.aboutPage{
-  a{
+.aboutPage {
+  a {
     text-decoration: none;
   }
-  blockquote{
+  blockquote {
     color: $darkPurple;
     margin: 0 0 10px;
   }
   @include about;
 }
 
-.aboutPhoto{
+.aboutPhoto {
   @include backgroundImg;
   background-image: url(../images/Glassman_min.jpg);
 }
 
-.miniAbout{
+.miniAbout2 {
+  @include smallP;
+}
+
+.miniAbout {
+  @include smallP;
   color: $darkPurple;
-  font-family: $secondFont;
-  width: 95%;
   display: flex;
-  margin: 0 auto 3em;
   flex-direction: row-reverse;
-  img{
+  img {
     height: 100%;
     margin-top: -1px;
   }
-  p{
+  p {
     color: $darkGreen;
     margin: 5px 0;
   }
-  h1{
+  h1 {
     margin: 0;
   }
-  a{
-    margin-top: 3em;
+  a {
+    margin-top: 1em;
   }
 
 }
 
-.story{
+.story {
     margin: 0 auto;
-  ul{
+  ul {
     text-align: left;
     margin: 0 auto;
     width: 80%;
   }
-  li{
+  li {
     margin-bottom: 10px;
   }
 }
 
-.p_img{
+.miniAbout, .familyPhotos, .p_img {
   border-top: solid #e5e5e5 2px;
-  border-bottom: solid #e5e5e5 2px;
-   display: flex;
-   text-align: center;
-   align-items: center;
-  span{
+}
+
+.p_img {
+  border-top: solid #e5e5e5 2px;
+  //border-bottom: solid #e5e5e5 2px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  span {
     margin: 0 2em;
   }
-  img{
-      width: 50%;
-      filter: grayscale(100%);
-      -webkit-transition: filter 1s; /* Safari */
-      transition: filter 1s;
-        &:hover{
-          filter: grayscale(0%);
-
-      }
+  img {
+      @include aboutPhotos
   }
 }
 
-.aboutBackground{
+.aboutBackground {
   width: 90%;
-  margin: 0 auto;
+  //margin: 0 auto;
+  margin: 1em auto 0;
 }
 
 // RESOURCES
-.resourcePhoto{
+.resourcePhoto {
   @include backgroundImg;
 }
 
-.resourceHeader::before{
+.resourceHeader::before {
     @include toggleTri;
     content: "▶";
 }
@@ -441,11 +505,11 @@ main{
     @include toggleTri;
 }
 
-.coachingHeader::before{
+.coachingHeader::before {
   content: "▶";
 }
 
-.resourceHeader{
+.resourceHeader {
   margin: 5px auto;
   width: 35%;
   min-width: 200px;
@@ -458,17 +522,17 @@ main{
   li {
     width: 50%;
     margin: 10px auto;
-    div{
+    div {
       width: 100%;
       height: 2px;
       border-bottom: 1px solid rgb(216, 216, 216);
       display: block;
   }
   }
-  ul{
+  ul {
     list-style: circle;
     display: none;
-    li{
+    li {
       list-style: circle;
       margin-bottom: 20px;
     }
@@ -476,45 +540,48 @@ main{
 }
 
 //TESTIMONIALS
-.testimonialsWrapper{
+.testimonialsWrapper {
   @include scroll;
   li {
     width: 85%;
   }
-  h1{
+  h1 {
     margin-bottom: 14px;
     padding-bottom: 8px;
   }
-  blockquote{
+  blockquote {
     margin: 0;
     font-style: italic;
     width: 100%;
     flex-basis: 80%;
   }
-  p{
+  p {
     flex-basis: 100%;
   }
 }
 
-.mainWrapper{
-  margin: 6em 0;
-
-  img{
+.mainWrapper {
+  margin: 1em 0;
+  h1 {
+    color:$darkGreen;
+  }
+  img {
     width: 31px;
     align-self: flex-start;
     margin-right: 1em;
   }
-   .testButton{
-     &{
+   .testButton {
+     & {
        cursor:pointer
      }
-    text-align: center;
-    margin: 0 auto;
+   text-align: center;
+   margin: 0 auto;
+   width: 100%;
   }
 }
 
-.secondWrapper{
-  li{
+.secondWrapper {
+  li {
     display: flex;
     margin: 20px;
     flex-wrap: wrap;
@@ -522,94 +589,209 @@ main{
 }
 
 //Services
-.servicesHeader{
+.servicesHeader {
   list-style: none;
 }
-.services{
+.services {
   color: $darkPurple;
-  article{
+  article {
     width: 82%;
     margin: 0 auto;
-    a{
+    a {
       text-align: center;
       width: 100%;
-      p{
+      p {
+        width: 75%;
         color: $darkGreen;
         margin-bottom: 2em;
       }
     }
-    h2, h3{
+    h2, h3 {
       margin: 2em 2em .5em;
     }
-    p{
+    p {
       width: 75%;
       margin: 0 auto;
     }
-    ul{
+    ul {
       font-family: Futura, Trebuchet MS, Arial, sans-serif;
       width: 50%;
-      margin: 2em auto;
+      margin: 1em auto;
     }
   }
-  h1{
+  h1 {
     text-align: center;
     border-bottom: solid 1px $borderColor;
   }
-  ul{
-    ul{
+  ul {
+    ul {
       list-style-type: disc;
     }
   }
 }
 
-.servicesList{
-  li{
+.servicesList {
+  li {
     margin-bottom: 10px;
   }
 }
 
-.listWrapper{
+.listWrapper {
   list-style: none;
-  h2{
+  h2 {
         margin-left: 0;
   }
-  p{
+  p {
         margin-left: 1em;
   }
 }
 
-.servicesReadMore{
+.servicesReadMore {
   width: 100%;
 }
 
-.hidden{
+.offerings {
+  width: 83%;
+  margin: auto;
+}
+
+.hidden {
   display: none!important;
 }
 
 //Media queries
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
+  .glassmanHeader {
+    svg {
+      width: 93%;
+    }
+  }
   .contact li img {
     width: 30%;
   }
-  .miniAbout img{
+  .miniAbout img {
     display: none;
   }
-  .p_img{
+  .p_img {
     display: block;
-    img{
+    img {
       width: 100%;
     }
   }
-  .maryLink{
-    p{
+  .maryLink {
+    p {
       margin: 0;
     }
   }
 }
 
-@media only screen and (max-width: 560px){
-  .divider{
-    margin: -41px 15px 0;
+
+
+
+
+.header {
+  .menuIcon {
+    display: none;
+  }
+  .menu {
+    position: relative;
+      ul {
+        padding:0;
+        margin:0;
+        li {
+          position: relative;
+          display: inline-block;
+          padding: 0;
+          list-style: none;
+        }
+      }
+    }
+  }
+  .mobileMenu {
+    display: none;
+    width: 50%;
+    position: absolute;
+    margin-left: -100%;
+    top: 0;
+    z-index: 2;
+    ul {
+      margin: 2em 0;
+      padding:0;
+      li {
+        list-style:none;
+        margin:0;
+      a {
+        display:block;
+        &:hover,&:active {
+          background-color: #999;
+        }
+      }
+    }
+  }
+}
+
+.mobileBodyWrapper {
+  .mobileDimmer {
+    left:50%;
+    z-index:100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    background-color:rgba(0,0,0,.45);
+    cursor:pointer;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+  #sticky {
+    a {
+      height: 2em;
+    }
+    background-color: transparent;
+  }
+  .header {
+
+    .menuIcon {
+      text-align: center;
+      display:block;
+      width:100%;
+      a {
+        display:inline-block;
+        padding:15px;
+      }
+    }
+    .menu {
+      max-height:0;
+      overflow:hidden;
+    }
+  }
+
+  .mobileBodyWrapper {
+    &.menuOpen {
+      left:50%;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index:1000;
+    }
+  }
+
+  .mobileMenu {
+    &.menuOpen {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: fixed;
+      display:block;
+      top: 0;
+      margin-left: 0;
+      z-index: 1;
+      width: 50%;
+      bottom: 0;
+      background-color: #fff;
+    }
   }
 }
