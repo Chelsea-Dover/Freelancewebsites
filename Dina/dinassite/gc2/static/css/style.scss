@@ -509,6 +509,26 @@ main {
   content: "▶";
 }
 
+ .resourceWIcon{
+   height: 3em;
+   div:first-child{
+      margin: auto;
+      //width: 50%;
+      width: 255px;
+      border-bottom: transparent;
+      height: 100%;
+   }
+   h2{
+     font-size: 30px;
+     display: inline-block;
+   }
+   svg{
+     height: 39px;
+     display: inline-block;
+     vertical-align: sub;
+   }
+ }
+
 .resourceHeader {
   margin: 5px auto;
   width: 35%;

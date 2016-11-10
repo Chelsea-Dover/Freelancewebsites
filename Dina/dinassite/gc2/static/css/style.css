@@ -361,6 +361,21 @@ main {
 .coachingHeader::before {
   content: "▶"; }
 
+.resourceWIcon {
+  height: 3em; }
+  .resourceWIcon div:first-child {
+    margin: auto;
+    width: 255px;
+    border-bottom: transparent;
+    height: 100%; }
+  .resourceWIcon h2 {
+    font-size: 30px;
+    display: inline-block; }
+  .resourceWIcon svg {
+    height: 39px;
+    display: inline-block;
+    vertical-align: sub; }
+
 .resourceHeader {
   margin: 5px auto;
   width: 35%;
