@@ -4,22 +4,8 @@
     {% load staticfiles %}
     <main>
 
-        <!--<section class="jumboWrapper homePhoto">-->
-            <!--<div class="jumbotron">-->
-                <!--<img src="{% static 'images/mount_hood-min.png'%}">-->
-            <!--</div>-->
-
-            <!--<div class="textWrapper">-->
-                <!--<h1 class="pageTitle">-->
-                    <!--Testimonials-->
-                <!--</h1>-->
-            <!--</div>-->
-        <!--</section>-->
-
-        <section class="jumboWrapper homePhoto">
-            <!--<div class="jumbotron">-->
-                <img src="{% static 'images/fremont-bridge.png'%}">
-            <!--</div>-->
+        <section class="jumboWrapper homePhoto bridgeImg">
+{#                <img class="jumbotron" src="{% static 'images/fremont-bridge.png'%}">#}
             <div class="HeaderText jumboH1">
                 <h1>
                     Testimonials
@@ -28,89 +14,80 @@
         </section>
 
         <ul class="testimonialsWrapper">
-            <li class="mainWrapper">
-                <h1>Providing Meaningful and Unique Value</h1>
-                <ul class="secondWrapper">
+            <li class="mainWrapper bio">
+                <h2>Providing Meaningful and Unique Value</h2>
+                <ul class="secondWrapper thinnerText">
                     <li>
-                        <img src="{% static 'images/quotes.svg' %}">
                         <blockquote>
                             Working with Dina has been a life-changing experience for me.
                             I'm now ‘awake’ and experiencing life much for fully than before.
                         </blockquote>
-                        <p>Law Firm Partner</p>
+                        <p>Partner</p>
                     </li>
-                    <li class="secondChild">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             The most personalized,
                             long term and insightful professional training experience I have had to date.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Dina is very good at helping me keep perspective and focus on things
                             that are truly important, rather than getting overly concerned with the short term issues.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Dina has been extremely helpful in navigating and planning for difficult conversations,
                             so that I feel better prepared to handle them.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
-                            Coaching is the top professional development experience I have received
+                            Coaching is the top professional development experience I have received.
                         </blockquote>
                         <p>
-                            Law Firm Partner
+                            Partner
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             I view my coaching sessions with Dina to have been a fundamental and integral
                             component of my training. Only Dina's coaching has meaningfully helped me build
                             the framework and structure to manage the growth of my day-to-day practice.
                         </blockquote>
                         <p>
-                            Law Firm Partner
+                            Partner
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                              I am now better able to realize and manage my limitations and
                             to avoid a negative vortex of my practice spiraling out of control.
                         </blockquote>
                         <p>
-                            Law Firm Partner
+                            Partner
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             I can't begin to count all the benefits I've received from coaching with Dina.
                             I have a vision of my ultimate career goals and coaching has helped me see the path there.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             The law practice, especially one focused on client development,
                             can sometimes feel like you are totally alone at the wheel.
@@ -118,87 +95,54 @@
                             makes it feel more collaborative.
                         </blockquote>
                         <p>
-                            Law Firm Senior Counsel
-                        </p>
-                    </li>
-                </ul>
-                <p class="readMore testButton">Read More...</p>
-                <p class="readLess testButton hidden">Read Less...</p>
-            </li>
-            <li class="mainWrapper">
-                <h1>Fostering Confidence and Strength</h1>
-                <ul class="secondWrapper">
-                    <li>
-                        <img src="{% static 'images/quotes.svg' %}">
-                        <blockquote>
-                            Coaching has helped me approach my work with more confidence and authority
-                            which I have been able to convey to colleagues and clients, with direct positive results.
-                        </blockquote>
-                        <p>
-                            Law Firm Senior Associate
-                        </p>
-                    </li>
-                    <li>
-                        <img src="{% static 'images/quotes.svg' %}">
-                        <blockquote>
-                            Through coaching I've been able to better identify the diversity
-                            of my interests and skills and to hone (or feed) them actively.
-                            Coaching has helped me to better connect with my whole self.
-                        </blockquote>
-                        <p>
-                            Law Firm Associate
+                            Senior Counsel
                         </p>
                     </li>
                 </ul>
             </li>
-            <li class="mainWrapper">
-                <h1>Supporting Work-Life Integration</h1>
-            <ul class="secondWrapper">
+            <li class="mainWrapper bio">
+                <h2>Supporting Work-Life Integration</h2>
+            <ul class="secondWrapper thinnerText">
                     <li>
-                        <img src="{% static 'images/quotes.svg' %}">
                         <blockquote>
                             It may be that Dina has broadened my sense of
-                            what I need to do to grow into a thriving practice . . .
+                            what I need to do to grow into a thriving practice...
                             including wellness practices, time management and workflow practices, and self-awareness.
                         </blockquote>
                         <p>
-                            Law Firm Partner
+                            Partner
                         </p>
                     </li>
-                    <li class="secondChild">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             I learned a lot about how to manage my stress and well-being at work and
                             how to use those skills to take my career (and life, really) to the next level.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Coaching has helped me see that I have more control over my life and career,
                             and begin to make choices rather than letting the choices be made for me by
                             others and to begin asserting the boundaries that I need.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Coaching has helped me see that I have more control over my life and career,
                             and begin to make choices rather than letting the choices be made for me by
                             others and to begin asserting the boundaries that I need.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Coaching has been hugely helpful in navigating the challenges of being an associate,
                             especially after returning to work after having my child.
@@ -206,22 +150,20 @@
                             so that I have a more viable future here.
                         </blockquote>
                         <p>
-                            Law Firm Associate, August
+                            Associate, August
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Dina offered me a great perspective on my work/life balance and mindfulness concerns --
                             helping me to see that I may not need to have family dinner every night to be a successful
                             parent, or give up Facebook entirely to be a good employee.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                              I feel a better sense of balance in my life,
                             perhaps because I've achieved better work/life balance,
@@ -229,37 +171,56 @@
                             and my home life and am achieving them.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
                 </ul>
-                <p class="readMore testButton">Read More...</p>
-                <p class="readLess testButton hidden">Read Less...</p>
             </li>
-            <li class="mainWrapper">
-                <h1>Providing an Active Sounding Board</h1>
-                <ul class="secondWrapper">
+            <li class="mainWrapper bio">
+                <h2>Fostering Confidence and Strength</h2>
+                <ul class="secondWrapper thinnerText">
                     <li>
-                        <img src="{% static 'images/quotes.svg' %}">
+                        <blockquote>
+                            Coaching has helped me approach my work with more confidence and authority
+                            which I have been able to convey to colleagues and clients, with direct positive results.
+                        </blockquote>
+                        <p>
+                            Senior Associate
+                        </p>
+                    </li>
+                    <li>
+                        <blockquote>
+                            Through coaching I've been able to better identify the diversity
+                            of my interests and skills and to hone (or feed) them actively.
+                            Coaching has helped me to better connect with my whole self.
+                        </blockquote>
+                        <p>
+                            Associate
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li class="mainWrapper bio">
+                <h2>Providing an Active Sounding Board</h2>
+                <ul class="secondWrapper thinnerText">
+                    <li>
                         <blockquote>
                             I very much valued Dina's commitment to confidentiality
                             and her sincere interest in my goals and well-being.
                         </blockquote>
                         <p>
-                            Law Firm Partner
+                            Partner
                         </p>
                     </li>
-                    <li class="secondChild">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             She put what I was feeling into words and empowered me to make positive changes.
                         </blockquote>
                         <p>
-                            Law Firm Senior Associate
+                            Senior Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             There are times when work is incredibly stressful,
                             and I feel like Dina is the only person I can talk
@@ -267,24 +228,25 @@
                             concrete steps of how to feel more empowered and improve the situation.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
-                    <li class="hidden">
-                        <img src="{% static 'images/quotes.svg' %}">
+                    <li>
                         <blockquote>
                             Dina is excellent at connecting with people on a personal level and really
                             listening to what you want to get out of a coaching
                             relationship instead of driving the conversation.
                         </blockquote>
                         <p>
-                            Law Firm Associate
+                            Associate
                         </p>
                     </li>
                 </ul>
-                <p class="readMore testButton">Read More...</p>
-                <p class="readLess testButton hidden">Read Less...</p>
             </li>
         </ul>
     </main>
 {% endblock content %}
+
+{% block script_tags %}
+    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load staticfiles %}
+    <main>
+
+        <section class="jumboWrapper homePhoto fallImg">
+            <div class="HeaderText jumboH1">
+                <h1>
+                    Consulting Services
+                </h1>
+            </div>
+        </section>
+
+{#        <aside class="topQuote">#}
+{#            <blockquote>#}
+{#                My passion is coaching professionals who are ready to define their own meaning of success and willing to take active steps towards achieving it.#}
+{#            </blockquote>#}
+{#        </aside>#}
+        <section class="mainWrapper services bio">
+{#            <h2 class="opencoachingHeader">Offering skillful talent management consulting services in the following areas:</h2>#}
+            <article class="secondWrapper noMargin">
+                <div>
+                    <h2>Offering skillful talent management consulting services in the following areas:</h2>
+                        <section class="offerings">
+                            <h3>Diversity</h3>
+                                <ul class="thinnerText">
+                                    <li>Affinity group implementation, support and program development</li>
+                                    <li>Retreat/special program development and program design</li>
+                                    <li>Alternative work arrangement management</li>
+                                    <li>Roundtable program design and implementation</li>
+                                    <li>Behavioral	Assessment	and	Facilitat</li>
+                                </ul>
+                                <h3>Performance management</h3>
+                                <ul class="thinnerText">
+                                    <li>Evaluation process review and enhancement (evaluation forms,
+                                    debriefing statements, promotional signals, communication and transparency review)</li>
+                                    <li>Career path design and implementation</li>
+                                </ul>
+                                <h3>Training and development</h3>
+                                <ul class="thinnerText">
+                                    <li>Upward review and feedback development</li>
+                                    <li>Skills guidelines/competencies design and implementation</li>
+                                    <li>Retreat design and program development</li>
+                                </ul>
+                                <h3>Culture</h3>
+                                <ul class="thinnerText">
+                                    <li>Sponsorship/mentorship program design and implementation</li>
+                                    <li>Alumni program/exit ambassador program development</li>
+                                    <li>Mindfulness/Wellness program development</li>
+                                    <li>Coaching strategy design and implementation</li>
+                                    <li>Positive Psychology	programming</li>
+                                </ul>
+                    </section>
+
+{#                    <h3 class="endQuote">#}
+{#                        Seasoned speaker and presenter on a wide range of diversity and professional development topics.#}
+{#                    </h3>#}
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+{% endblock content %}
+
+{% block script_tags %}
+    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
+{% endblock %}

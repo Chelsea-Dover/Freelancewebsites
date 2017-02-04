@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load staticfiles %}
+    <main>
+
+        <section class="jumboWrapper homePhoto landscapeImg">
+            <div class="HeaderText jumboH1">
+                <h1>
+                    Coaching Services
+                </h1>
+            </div>
+        </section>
+
+{#        <aside class="topQuote">#}
+{#             <blockquote>#}
+{#                My passion is coaching professionals who are ready to define their own meaning of success and willing to take active steps towards achieving it.#}
+{#             </blockquote>#}
+{#        </aside>#}
+
+        <section class="mainWrapper services bio">
+{#            <h1 class="opencoachingHeader">#}
+{#                Coaching Services#}
+{#            </h1>#}
+            <article class="secondWrapper noMargin">
+                <div class="coachingWrapper">
+                    <h3>
+                        What is Integral Coaching?
+                     </h3>
+                    <p>
+                        Integral Coaching is intended to be the most comprehensive way to build competence to face one’s
+                        life situation by attending to the whole person.  The intended outcomes of integral coaching include:
+                    </p>
+                    <ul>
+                        <li>long-term excellence</li>
+                        <li>capacity to self-correct</li>
+                        <li>competence to self-generate</li>
+                    </ul>
+                    <p>Integral coaching addresses four domains:</p>
+                    <ul>
+                        <li>communication and relationship</li>
+                        <li>self-knowledge and self-management</li>
+                        <li>environment</li>
+                        <li>personal behavior</li>
+                    </ul>
+                    <p>Through coaching, I expose my clients to new practices and exercises, which are custom-designed for them,
+                        their individual goals, and their unique work environments.
+                        Coaching allows individuals to focus on their immediate concerns, as well as their long-term goals.
+                        It allows them to focus on self-management, as well as how they lead and influence others.
+                        Ultimately, through coaching, clients gain an expanded capacity to take effective action,
+                        skillfully self-correct when they find themselves off course, and continuously improve.
+                    </p>
+
+
+                    <h3>
+                        Who Can Benefit from Integral Coaching?
+                    </h3>
+                    <p>Integral coaching can benefit any professional ready to take action towards achieving their
+                        individual definition of success.  My coaching clients include the following:
+                    </p>
+                    <ul>
+                        <li>Newly promoted professionals</li>
+                        <li>High performers approaching promotion</li>
+                        <li>Professionals transitioning into new role or work arrangement (e.g. lateral hires)</li>
+                        <li>Expecting and newly returning parents</li>
+                        <li>Professionals navigating and managing alternative schedules</li>
+                        <li>Departing/transitioning professionals (e.g. retirement, assumption of new role within company, managed transition, office move)</li>
+                        <li>Committee leaders and group/office chairs taking on new administrative responsibilities</li>
+                    </ul>
+
+                    <h3>
+                        Options for Structuring Coaching Engagements
+                    </h3>
+                    <ul>
+                        <li>
+                            6-month individual engagement, including bi-monthly in-person or telephone meetings.
+                            Individual engagements include an intake conversation, program design and ongoing support/correspondence.
+                        </li>
+                        <li>
+                            In-office retainer option.  This option includes bi-monthly presence at your office location,
+                            on a half-day or full day basis, to meet with coaching clients.
+                            Includes breakfast or lunch meeting with management representative.
+                        </li>
+                        <li>Group coaching facilitations</li>
+                    </ul>
+                    <p>I look forward to talking to you about structuring an arrangement that meets your needs and desires.</p>
+                </div>
+            </article>
+        </section>
+        {% endblock content %}
+
+{% block script_tags %}
+    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
+{% endblock %}

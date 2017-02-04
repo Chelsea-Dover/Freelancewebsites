@@ -13,6 +13,7 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+
 def image(request):
     return render(request, 'image.html')
 
@@ -21,8 +22,11 @@ def resources(request):
     return render(request, 'resources.html')
 
 
-def services(request):
-    return render(request, 'services.html')
+def consulting(request):
+    return render(request, 'consulting.html')
+
+def coaching(request):
+    return render(request, 'coaching.html')
 
 
 def testimonials(request):

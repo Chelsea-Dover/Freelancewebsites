@@ -13,7 +13,7 @@ $('h2').flowtype({
     minimum: 400,
     maximum: 1200,
     minFont : 10,
-    maxFont : 29
+    maxFont : 33
 });
 
 $('.resourceHeader').flowtype({
@@ -28,21 +28,21 @@ $('h3').flowtype({
     minimum: 400,
     maximum: 1200,
     minFont : 15,
-    maxFont : 30
+    maxFont : 27
 });
 
 $('p').flowtype({
     minimum: 400,
     maximum: 1200,
     minFont : 14,
-    maxFont : 19
+    maxFont : 22
 });
 
 $('blockquote').flowtype({
     minimum: 400,
     maximum: 1200,
     minFont : 15,
-    maxFont : 20
+    maxFont : 19
 });
 
 $('li').flowtype({
@@ -60,11 +60,18 @@ $('a').flowtype({
     maxFont : 35
 });
 
+$('.footerLink').flowtype({
+    minimum: 400,
+    maximum: 1200,
+    minFont : 15,
+    maxFont : 35
+});
+
 $('.navLink').flowtype({
     minimum: 400,
     maximum: 1200,
-    minFont : 30,
-    maxFont : 55
+    minFont : 25,
+    maxFont : 45
 });
 
 $('.mobileLink').flowtype({
@@ -72,6 +79,13 @@ $('.mobileLink').flowtype({
     maximum: 1200,
     minFont : 20,
     maxFont : 55
+});
+
+$('.mobileHeader').flowtype({
+    minimum: 400,
+    maximum: 1200,
+    minFont : 25,
+    maxFont : 35
 });
 
 $('.HeaderText').children().flowtype({
@@ -88,8 +102,6 @@ $('.pageTitle').flowtype({
     minFont : 20,
     maxFont : 70
 });
-
-
 
 
 

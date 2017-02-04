@@ -3,42 +3,47 @@
 {% block content %}
     {% load staticfiles %}
     <main>
+    <section class="jumboWrapper homePhoto mountImg">
+        <div class="HeaderText jumboH1">
+            <figure class="GC2HeaderText">
+                <img src="{% static 'images/GC2TextHeader.svg' %}">
+            </figure>
+        </div>
+    </section>
 
     <section class="bio">
-        <aside>
+        <aside class="dinaImg">
             <img src=" {%static 'images/Glassman_min.jpg'%} ">
         </aside>
 
         <article>
-            <p>
-            As an independent Career Coach, I am passionate about supporting professionals in reaching specific career goals,
-                and deriving greater meaning and satisfaction from their work and life. I offer an integrated coaching approach,
-                focused on exploring possibilities and achieving greater fulfillment and direction for every client.
-                My passion is coaching professionals at various stages of positive transition and change, including career shifts,
-                transitions from leave, and other professional milestones.
-                As a veteran of Big Law, I started in the litigation practice at DLA Piper in New York, and then spent sixteen years
-                at Perkins Coie in Portland.  With over a decade of talent management experience, including as the Firmwide Director
-                of Attorney Development, I have coached over 100 professionals in achieving greater integration in the many aspects
-                of their lives.  I am a graduate of Colgate University, New York University School of Law, and New Ventures West Integral
-                Coaching & Certification Program.
+            <p class="thinnerText">
+                I am passionate about supporting professionals in reaching specific career goals,
+                and deriving greater meaning and satisfaction from their work and life.  As an experienced
+                certified integral coach, I offer an integrated approach, focused on exploring possibilities
+                and achieving greater fulfillment and direction for every client.
             </p>
-            <a href="https://www.docdroid.net/X89brf7/otla-background.pdf.html">Read more...</a>
         </article>
     </section>
 
-    <section class="jumboWrapper homePhoto">
-        <div class="jumbotron">
-            <img src="{% static 'images/mount_hood-min.png'%}">
-        </div>
-        <div class="maryLink">
-            <a href="https://en.wikipedia.org/wiki/Mary_Wollstonecraft" class="textWrapper">
-                <h1 class="pageTitle">
-                    "the beginning is always today"
-                </h1>
-                <p>Mary Wollstonecraft</p>
-            </a>
-        </div>
-    </section>
+{#    <aside class="associateLink">#}
+{#         <blockquote>"I can't begin to count all the benefits I've received from coaching with Dina.#}
+{#            I have a vision of my ultimate career goals and coaching has helped me see the path there."#}
+{#         </blockquote>#}
+{#        <p>Associate</p>#}
+{#    </aside>#}
+
+{#    <section class="homePhoto">#}
+{#            <img class="jumbotron homeBottom" src="{% static 'images/mount_hood-min.jpg'%}">#}
+{#        <div class="HeaderText">#}
+            <!--<a href="https://en.wikipedia.org/wiki/Mary_Wollstonecraft" class="textWrapper">-->
+                <!--<h1 class="pageTitle">-->
+                    <!--"the beginning is always today"-->
+                <!--</h1>-->
+                <!--<p>Mary Wollstonecraft</p>-->
+            <!--</a>-->
+{#        </div>#}
+{#    </section>#}
 
     </main>
 {% endblock content %}

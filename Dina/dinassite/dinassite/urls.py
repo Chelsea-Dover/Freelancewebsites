@@ -18,12 +18,12 @@ from django.contrib import admin
 from gc2 import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home, name='home'),
     # url(r'^$', include('gc2.urls', namespace='')),
-    url(r'^about', views.about, name='about'),
+    url(r'^about_dina', views.about, name='about'),
     url(r'^resources', views.resources, name='resources'),
-    url(r'^services', views.services, name='services'),
+    url(r'^consulting', views.consulting, name='consulting'),
+    url(r'^coaching', views.coaching, name='coaching'),
     url(r'^testimonials', views.testimonials, name='testimonials'),
     url(r'^Diversity_Champion_2015', views.image, name='image'),
 ]
