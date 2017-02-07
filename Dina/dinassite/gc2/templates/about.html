@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+    About Dina Glassman
+{% endblock title %}
+
 {% block content %}
     {% load staticfiles %}
 
@@ -35,7 +39,7 @@
 
             <section class="p_img dinasbackground">
                 <a href="/Diversity_Champion_2015">
-                    <img src="{% static 'images/divers_chap.svg'%}">
+                    <img src="{% static 'images/divers_chap.svg'%}" alt="Diversity Champion 2015 Hyperlink Logo">
                 </a>
                 <section class="aboutBackground">
                     <h2>
@@ -63,28 +67,9 @@
                 </section>
             </section>
 
-            <!--<aside class="miniAbout">-->
-
-                <!--&lt;!&ndash;<img src="{% static 'images/divers_chap.svg' %}">&ndash;&gt;-->
-
-
-                <!--<a href="/Diversity_Champion_2015">-->
-                    <!--<blockquote>-->
-                        <!--"Dina has the ability to see what is needed and figure out how to make it happen."-->
-                    <!--</blockquote>-->
-
-                    <!--<p>-->
-                        <!--I have tried to impact diversity more through my actions than my words.-->
-                        <!--I have not felt compelled to be loud or outspoken, just authentic and-->
-                        <!--sincere in my commitment to the work. Diversity work has provided a ripe-->
-                        <!--field for my natural inclinations.-->
-                    <!--</p>-->
-                <!--</a>-->
-            <!--</aside>-->
-
             <section class="famWrapper">
                 <aside class="familyPhotos">
-                    <img src="{% static 'images/FamilyImages.png'%}">
+                    <img src="{% static 'images/FamilyImages.png'%}" alt="Family Photo">
                 </aside>
             </section>
 

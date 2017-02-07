@@ -4,7 +4,6 @@
 
 $(function openNav() {
     $(' .icon ').click(function(e) {
-        console.log('bruh');
         $(' #navLinks ').toggleClass('navShow').toggleClass('topnav');
     })
 });

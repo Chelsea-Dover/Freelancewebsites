@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+    GC2 Consulting Services
+{% endblock title %}
+
 {% block content %}
     {% load staticfiles %}
     <main>
@@ -12,13 +16,7 @@
             </div>
         </section>
 
-{#        <aside class="topQuote">#}
-{#            <blockquote>#}
-{#                My passion is coaching professionals who are ready to define their own meaning of success and willing to take active steps towards achieving it.#}
-{#            </blockquote>#}
-{#        </aside>#}
         <section class="mainWrapper services bio">
-{#            <h2 class="opencoachingHeader">Offering skillful talent management consulting services in the following areas:</h2>#}
             <article class="secondWrapper noMargin">
                 <div>
                     <h2>Offering skillful talent management consulting services in the following areas:</h2>
@@ -52,10 +50,6 @@
                                     <li>Positive Psychology	programming</li>
                                 </ul>
                     </section>
-
-{#                    <h3 class="endQuote">#}
-{#                        Seasoned speaker and presenter on a wide range of diversity and professional development topics.#}
-{#                    </h3>#}
                 </div>
             </article>
 
@@ -63,8 +57,3 @@
 
     </main>
 {% endblock content %}
-
-{% block script_tags %}
-    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/openresource.js' %}"></script>
-{% endblock %}

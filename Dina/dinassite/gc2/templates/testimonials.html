@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
+{% block title %}
+    Glassman Coaching + Consulting Testimonials
+{% endblock title %}
+
 {% block content %}
     {% load staticfiles %}
     <main>
 
         <section class="jumboWrapper homePhoto bridgeImg">
-{#                <img class="jumbotron" src="{% static 'images/fremont-bridge.png'%}">#}
             <div class="HeaderText jumboH1">
                 <h1>
                     Testimonials
@@ -246,7 +249,3 @@
         </ul>
     </main>
 {% endblock content %}
-
-{% block script_tags %}
-    <script type="text/javascript" src="{% static 'js/readmore.js' %}"></script>
-{% endblock %}
