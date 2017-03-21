@@ -794,7 +794,8 @@ main {
     margin: 0; } }
 @media only screen and (max-width: 900px) {
   .bio .servicesHome {
-    width: 95%; }
+    width: 95%;
+    margin-left: 0; }
 
   .topnav {
     display: none; }
