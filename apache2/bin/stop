@@ -1,0 +1,3 @@
+#!/bin/bash
+
+LD_LIBRARY_PATH=/home/glasd/webapps/dina/apache2/lib:/home/glasd/webapps/dina/lib /home/glasd/webapps/dina/apache2/bin/httpd.worker -f /home/glasd/webapps/dina/apache2/conf/httpd.conf -k stop

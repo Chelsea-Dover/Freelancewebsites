@@ -25,7 +25,10 @@ SECRET_KEY = '2aqjz42jwrq7t3^85*5s*edvr=3ydkv6athsclo!^(_qb!#3#o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'glasd.webfactional.com',
+    'glassmancoaching.com',
+]
 
 
 # Application definition
@@ -101,3 +104,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "gc2", "static"),
+]
+
+STATIC_ROOT = "/home/glasd/webapps/dina_static"
