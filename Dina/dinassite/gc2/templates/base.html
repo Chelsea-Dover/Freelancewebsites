@@ -5,47 +5,56 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     <title>
         {% block title %}
         {% endblock title %}
     </title>
-    <link rel="icon" href="{% static 'images/gc2.ico'%}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'images/gc2.ico' %}" type="image/x-icon"/>
 </head>
 <body>
-       <header class="header sticky">
-            <nav class="menu">
-                <div>
-                    <a class="logo" href="/">
-                        <img src="{% static 'images/gc2.svg' %}" alt="GC2 logo">
-                    </a>
+<header class="header sticky">
+    <nav class="menu">
+        <div>
+            <a class="logo" href="/">
+                <img src="{% static 'images/gc2.svg' %}" alt="GC2 logo">
+            </a>
 
-                    <a class="icon" href="#" style="font-size: 20px">
-                        &#9776;
-                    </a>
-                </div>
-                <div>
-                    <ul id="navLinks" class="topnav">
-                        <li><a class="navLink" href="/">Home</a></li>
-                        <li><a class="navLink" href="/about_dina">About</a></li>
-                        <li><a class="navLink" href="/coaching">Coaching</a></li>
-                        <li><a class="navLink" href="/consulting">Consulting</a></li>
-                        <li><a class="navLink" href="/testimonials">Testimonials</a></li>
-                        <li><a class="navLink" href="/resources">Resources</a></li>
-                    </ul>
-                </div>
-            </nav>
-       </header>
-       <div class="phantomDiv"></div>
+            <a class="icon" href="#" style="font-size: 20px">
+                &#9776;
+            </a>
+        </div>
+        <div>
+            <ul id="navLinks" class="topnav">
+                <li><a class="navLink" href="/">Home</a></li>
+                <li><a class="navLink" href="/about_dina">About</a></li>
+                <li><a class="navLink" href="/coaching">Coaching</a></li>
+                <li><a class="navLink" href="/consulting">Consulting</a></li>
+                <li><a class="navLink" href="/testimonials">Testimonials</a></li>
+                <li><a class="navLink" href="/resources">Resources</a></li>
+                <li><a class="navLink" href="mailto:dina@glassmancoaching.com">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="phantomDiv"></div>
 
-            {% block content %}
-            {% endblock content %}
+{% block content %}
+{% endblock content %}
 
-       <footer class="contact">
-           <div class="footerTop"></div>
-           <div>
+<footer class="contact">
+    <div class="footerTop"></div>
+    <div class="footerBottom">
+        <div>
+            <img src="{% static 'images/gc2.svg' %}" alt="GC2 logo">
             <ul>
+                <li>
+                    <p>
+                        © 2017 Glassman Coaching <span class="green">+</span> Consulting<br>
+                        Portland, Oregon
+                    </p>
+                </li>
                 <li>
                     <a class="footerLink" href="mailto:dina@glassmancoaching.com">
                         dina@glassmancoaching.com
@@ -56,18 +65,18 @@
                         503.703.1218
                     </a>
                 </li>
-                <li>
-                    <a class="footerLink" href="https://www.linkedin.com/in/dina-glassman-060b9250">
-                        Linked<img src="{% static 'images/linkedInIcon.svg' %}" alt="GC2 logo">
-                    </a>
-                </li>
             </ul>
-       </div>
-       </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/hamMenu.js' %}"></script>
-    {% block script_tags %}
-    {% endblock %}
+        </div>
+        <a class="footerLink" href="https://www.linkedin.com/in/dina-glassman-060b9250">
+            Linked<img src="{% static 'images/linkedInIcon.svg' %}" alt="GC2 logo">
+        </a>
+
+    </div>
+</footer>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/hamMenu.js' %}"></script>
+{% block script_tags %}
+{% endblock %}
 </body>
 
 

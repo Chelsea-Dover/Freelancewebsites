@@ -7,28 +7,69 @@
 {% block content %}
     {% load staticfiles %}
     <main>
-    <section class="jumboWrapper homePhoto mountImg">
-        <div class="HeaderText jumboH1">
-            <figure class="GC2HeaderText">
-                <img src="{% static 'images/GC2TextHeader.svg' %}" alt="Glassman Coaching + Consulting">
-            </figure>
-        </div>
-    </section>
+        <section class="jumboWrapper homePhoto mountImg">
+            <div class="HeaderText jumboH1">
+                <h1>
+                    Glassman Coaching <span class="green">+</span> Consulting
+                </h1>
+            </div>
+        </section>
 
-    <section class="bio">
-        <aside class="dinaImg">
-            <img src=" {%static 'images/Glassman_min.jpg'%} " alt="Headshot of Dina">
-        </aside>
+        <section class="bio">
+            <aside class="dinaImg">
+                <img src=" {% static 'images/Glassman_min.jpg' %} " alt="Headshot of Dina">
+                {#            <img src=" {%static 'images/landscape.jpg'%} " alt="Landscape image">#}
+            </aside>
 
-        <article>
-            <p class="thinnerText">
-                I am passionate about supporting professionals in reaching specific career goals,
-                and deriving greater meaning and satisfaction from their work and life.  As an experienced
-                certified integral coach, I offer an integrated approach, focused on exploring possibilities
-                and achieving greater fulfillment and direction for every client.
-            </p>
-        </article>
-    </section>
+            <article>
+                <p class="thinnerText">
+                    I am passionate about supporting professionals in reaching their career goals while deriving greater
+                    meaning and satisfaction from their work and life. As an experienced certified coach, I offer a
+                    holistic <a href="/coaching">coaching</a> approach focused on exploring possibilities and shifting behaviors. I also offer
+                    skillful <a href="/consulting">consulting</a> services in the areas of diversity, performance management, training and
+                    organizational culture.
+                </p>
+                <aside class="servicesHome">
+                    <div class="servicesBio">
+                        <div class="serviceicon">
+                            <span></span>
+                            <div>
+                                Coaching
+                            </div>
+                        </div>
+                        <div>
+                            <p>Offering skillful career coaching services to professionals ready to take action towards
+                                their individual definitions of success.</p>
+
+                            <div class="learnmore">
+                                <a href="/coaching">
+                                    LEARN MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicesBio">
+                        <div class="serviceicon">
+                            <span></span>
+                            <div>
+                                Consulting
+                            </div>
+                        </div>
+                        <div>
+                            <p>Experienced talent management consulting services in the areas of diversity,
+                                preformance management, training & culture.</p>
+
+                            <div class="learnmore">
+                                <a href="/coaching">
+                                    LEARN MORE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </article>
+
+        </section>
 
     </main>
 {% endblock content %}

@@ -1,17 +1,8 @@
-
-//Table of content
-//
-// 1. Variables
-// 2. Mixins
-// 3. Base
-// 4. Home
-
 // VARIALBES
-$mainFont: Futura,Trebuchet MS,Arial,sans-serif;
+$mainFont: Futura, Trebuchet MS, Arial, sans-serif;
 $darkPurple: #4d335a;
 $darkGreen: #447738;
 $borderColor: #D8D8D8;
-
 
 //MIXIN
 @mixin toggleTri {
@@ -20,18 +11,18 @@ $borderColor: #D8D8D8;
 }
 
 @mixin jumboText {
-    position: absolute;
-    //left: 0;
-    //right: 31%;
-    width: 100%;
-    //height: 38%;
-    max-height: 550px;
-    margin: 0;
-    bottom: 0;
+  position: absolute;
+  //left: 0;
+  //right: 31%;
+  width: 100%;
+  //height: 38%;
+  max-height: 550px;
+  margin: 0;
+  bottom: 0;
 }
 
 @mixin mainText {
-   color: $darkPurple;
+  color: $darkPurple;
 }
 
 @mixin scroll {
@@ -40,7 +31,6 @@ $borderColor: #D8D8D8;
   list-style: none;
   display: flex;
   justify-content: space-around;
-  //padding: 0;
   color: $darkPurple;
 
   li {
@@ -51,19 +41,16 @@ $borderColor: #D8D8D8;
     text-decoration: none;
   }
   ul {
-    //padding: 0;
     list-style: none;
     overflow: hidden;
   }
   h1 {
     text-align: center;
-    //border-bottom: solid 1px $borderColor;
     margin: 5px;
   }
 
   p {
     color: $darkGreen;
-    //width: 29em;
     align-self: flex-end;
     margin: 0;
     text-align: right;
@@ -104,59 +91,54 @@ $borderColor: #D8D8D8;
   color: #fff;
 }
 
-@mixin borderdWrapper($marginTop, $borderPadding){
+@mixin borderdWrapper($marginTop, $borderPadding) {
   border: solid 2px #D8D8D8;
-  padding: $borderPadding  35px 30px;
+  padding: $borderPadding 35px 30px;
   margin-top: $marginTop;
 }
 
-// BASE
-
 .thinnerText {
-  font-family: 'Arsenal', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
-
 html {
-    font-size: 16px;
-    font-family: $mainFont;
+  font-size: 16px;
+  font-family: $mainFont;
 }
 
 h1, .HeaderText h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 h2, .navShow a, .topnav a {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-
-
 @media screen and (min-width: 900px) {
-    html {
-        font-size: 18px;
-    }
-    h1, .HeaderText h2 {
-        font-size: 36px;
-    }
-    h2, .navShow a{
-        font-size: 25px;
-    }
+  html {
+    font-size: 18px;
+  }
+  h1, .HeaderText h2 {
+    font-size: 36px;
+  }
+  h2, .navShow a {
+    font-size: 25px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    html {
-        font-size: 20px;
-    }
-    .HeaderText h2 {
-      font-size: 36px;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    h2, .navShow a {
-        font-size: 30px;
-    }
+  html {
+    font-size: 20px;
+  }
+  .HeaderText h2 {
+    font-size: 36px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2, .navShow a {
+    font-size: 30px;
+  }
 }
 
 .purpleText {
@@ -164,12 +146,12 @@ h2, .navShow a, .topnav a {
 }
 
 .backgroundHeader {
-    height: 3em;
-    background-image: url(https://visualhunt.com/photos/m/1/rice-field-green-grass-nature-plant-natural.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: solid #e5e5e5 2px;
+  height: 3em;
+  background-image: url(https://visualhunt.com/photos/m/1/rice-field-green-grass-nature-plant-natural.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid #e5e5e5 2px;
   h1, h2 {
     margin: 0;
   }
@@ -188,15 +170,20 @@ body, html {
   min-height: 100%;
 }
 
-body {
-  //font-size: 18px;
-  font-family: $mainFont;
-  color: $darkPurple;
-  //background-color: #F7F7F7;
+.navLink {
+  transition: 0.2s;
+  &:hover, &:active {
+    color: $darkPurple;
+  }
 }
 
-h1,h2,h3,h4,h5,h6,p {
- line-height: 1.45;
+body {
+  font-family: $mainFont;
+  color: $darkPurple;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.45;
 }
 
 li {
@@ -208,7 +195,6 @@ a {
   color: $darkGreen;
 }
 
-//Nav
 nav {
   height: 4em;
   display: flex;
@@ -223,15 +209,40 @@ nav {
   }
 }
 
+.footerBottom {
+  display: flex;
+  background: #ACAFBC;
+  color: #fff;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+  div {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 4em;
+      margin: 0.5em;
+      //margin: 20px;
+    }
+    a {
+      color: $darkPurple;
+    }
+  }
+}
+
 .sticky {
   z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
   left: 0;
-  background-color: rgba(140, 143, 156, 0.99);
-  a{
-    color: #F7F7F7;
+  background-color: rgba(181, 184, 195, 0.99);
+  a {
+    color: #fff;
     margin: 0 .4em;
   }
 }
@@ -239,8 +250,6 @@ nav {
 .top-phantom {
   margin-bottom: 4em;
 }
-
-//
 
 .shifted {
   margin-top: 54px;
@@ -281,32 +290,32 @@ figure {
 
 .contact {
   li {
-    width: 16em;
     list-style: none;
     margin-bottom: 3px;
-    img {
-      width: 9%;
-      margin-left: 3px;
-    }
   }
   ul {
-      display: flex;
-    flex-direction: column;
     padding: 2em .5em;
     margin: 0;
-    background: #727586 url(../images/gc2.svg) no-repeat bottom center;
     background-size: 80px;
+    font-size: .6em;
     h2 {
-      color: #447738;
+      color: $darkGreen;
     }
   }
   a {
-    color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
+    width: 100px;
   }
+}
 
+.footerLink {
+  color: #fff;
+  img {
+    height: 20px;
+    margin-bottom: 3px;
+  }
 }
 
 .phantomDiv {
@@ -314,59 +323,38 @@ figure {
 }
 
 .footerTop {
-  background-color: #ACAFBC;
+  background-color: #c6c9d6;
   height: 2em;
 }
 
 .jumboWrapper {
-    //margin-top: 86px;
-    box-shadow: #d1cac0 -3px -13px 22px;
-    position: relative;
-    height: 100%;
-    max-height: 550px;
+  box-shadow: #d1cac0 -3px -13px 22px;
+  position: relative;
+  height: 100%;
+  max-height: 550px;
 }
 
 .jumbotron, .gc2JumboLogo {
-        width: 100%;
-        height: 100%;
-        max-height: 550px;
-}
-
-
-//HOME
-
-.associateLink {
-    background-image: url(../images/mount_hood-min.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center bottom;
-    padding: 1.5em 0;
-    blockquote {
-        margin-bottom: 0;
-        color: $darkGreen;
-      font-style: italic;
-    }
-    p {
-        text-align: end;
-        padding: 0 2em;
-    }
+  width: 100%;
+  height: 100%;
+  max-height: 550px;
 }
 
 .bio {
   @include mainText;
-    width: 93%;
-    margin: 2em auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 93%;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   article {
-    @include borderdWrapper(-97px, 120px)
+    @include borderdWrapper(-97px, 120px);
+    padding-bottom: 0;
   }
   .secondWrapper {
     @include borderdWrapper(-44px, 81px)
   }
-
 }
 
 main {
@@ -375,16 +363,70 @@ main {
 
 .bio {
   .dinaImg {
+    width: 10em;
+    z-index: 1;
+
+    p {
+      color: #fff;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  aside {
+    h1 {
+      margin: 0;
+    }
+  }
+  .servicesHome {
+    margin: 55px auto;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .serviceicon {
+      position: relative;
       width: 10em;
-      z-index: 1;
-    }
-    img {
-      width: 100%;
-    }
-    aside {
-      h1 {
-        margin: 0;
+      height: 10em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        color: #fff;
+        z-index: 5;
       }
+    }
+    .servicesBio {
+      height: 100%;
+      width: 14em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 55px;
+
+      & > div:last-child {
+        font-size: 0.8em;
+        text-align: left;
+      }
+      &:last-child {
+        span {
+          background: url(../images/Nature_Path.jpg) center;
+          background-size: cover;
+        }
+      }
+    }
+    span {
+      width: 10em;
+      height: 10em;
+      background: url(../images/landscape.jpg) center;
+      background-size: cover;
+      border-radius: 50%;
+      //transition: 0.5s;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 }
 
@@ -394,8 +436,8 @@ main {
 }
 
 .GC2HeaderText {
-    width: 55%;
-    margin: 3em auto;
+  width: 55%;
+  margin: 3em auto;
 }
 
 .HeaderText {
@@ -414,10 +456,7 @@ main {
   margin-top: .25em;
 }
 
-//ABOUT PAGE
-
 .famWrapper {
-  //margin: 0 -35px;
   margin: 3em -35px;
 }
 
@@ -434,14 +473,6 @@ main {
     width: 100%;
   }
 }
-
-//.aboutImg {
-//  //background: url(../images/Glassman_min.jpg) no-repeat top left);
-//  background-image: url(../images/Glassman_min.jpg);
-//  background-position: top left;
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//}
 
 .aboutWrapper {
   background-color: #fffcf0;
@@ -464,7 +495,6 @@ main {
   color: $darkPurple;
 }
 
-
 .serviceText {
   @include jumboText;
   text-align: center;
@@ -474,10 +504,10 @@ main {
 .serviceAbout {
   margin-top: 3em;
   ul {
-      width: 50%;
-      margin: auto;
-      text-align: left;
-    }
+    width: 50%;
+    margin: auto;
+    text-align: left;
+  }
   @include about;
 }
 
@@ -490,7 +520,7 @@ main {
     margin: 0 0 10px;
   }
   @include about;
-  h1, h2{
+  h1, h2 {
     color: $darkGreen;
   }
 }
@@ -534,8 +564,6 @@ main {
   }
 }
 
-
-
 .miniAbout, .p_img {
   border-top: solid #e5e5e5 2px;
 }
@@ -559,14 +587,14 @@ main {
 }
 
 .gc2Text {
-    width: 50%;
-    height: 50px;
+  width: 50%;
+  height: 50px;
 }
 
 .miniAbout2 {
   @include smallP;
   width: 100%;
-  p{
+  p {
     color: #447738;
     font-style: italic;
     width: 100%;
@@ -579,8 +607,6 @@ main {
   }
 }
 
-// RESOURCES
-
 .whiteText {
   color: #fff;
 }
@@ -589,39 +615,47 @@ main {
   @include backgroundImg;
 }
 
-.opencoachingHeader{
+.opencoachingHeader, .green {
   color: $darkGreen;
 }
 
-.resourceHeader::before{
+.jumboH1 h1 {
+  font-weight: normal;
+}
+
+.resourceHeader::before {
   content: "▶";
   @include toggleTri;
 }
 
-.openresource::before{
+.openresource::before {
   content: "▼";
   @include toggleTri;
 
 }
 
- .resourceWIcon{
-   div:first-child{
-      margin: auto;
-      width: 255px;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-   h2{
-     display: inline-block;
-   }
-   svg{
-     height: 39px;
-     display: inline-block;
-     vertical-align: sub;
-   }
- }
+.resourceWIcon {
+  ul {
+    font-family: 'Roboto Slab', serif;
+  }
+  div:first-child {
+    margin: auto;
+    width: 255px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    display: inline-block;
+  }
+  svg {
+    height: 39px;
+    display: inline-block;
+    vertical-align: sub;
+  }
+}
+
 .resourceHeader, .openresource {
   margin: 5px auto;
   width: 35%;
@@ -639,25 +673,22 @@ main {
     hr {
       width: 100%;
       border: 1px solid #d8d8d8;
-  }
+    }
   }
   ul {
     list-style: circle;
-    //width: 52%;
     display: none;
     max-width: 827px;
     margin: 0 auto;
     padding: 0;
     li {
       list-style: circle;
-      //margin: 10px 0 20px;
       display: flex;
       justify-content: space-between;
     }
   }
 }
 
-//TESTIMONIALS
 .greenText {
   color: $darkGreen;
 }
@@ -679,13 +710,12 @@ main {
 }
 
 .mountImg {
-  @include jumboImg("../images/mount_hood-min.jpg");
+  @include jumboImg("../images/GC_homeheader.jpg");
 }
 
 .lakeImg {
   @include jumboImg("../images/mountain-lake.jpg");
 }
-//mo
 
 .testimonialsWrapper {
   padding: 0;
@@ -699,15 +729,18 @@ main {
     font-style: italic;
     width: 100%;
   }
-  p {
-    flex-basis: 100%;
+  span {
+    color: $darkGreen;
+    font-style: initial;
+    font-weight: bold;
+    font-size: 0.8em;
   }
 }
-//blep
+
 .mainWrapper {
   margin: 1em auto;
   h2 {
-    color:$darkGreen;
+    color: $darkGreen;
     background-color: #fff;
     z-index: 1;
     padding: 0 10px;
@@ -717,22 +750,19 @@ main {
     align-self: flex-start;
     margin-right: 1em;
   }
-   .testButton {
-     & {
-       cursor:pointer
-     }
-   text-align: center;
-   margin: 0 auto;
-   width: 100%;
+  .testButton {
+    & {
+      cursor: pointer
+    }
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 .secondWrapper {
   margin-top: -47px;
   li {
-    //display: flex;
-    //margin: 20px;
-    //flex-wrap: wrap;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -743,9 +773,7 @@ main {
     padding: 22px 15px;
   }
 }
-//yolo
 
-//Services
 .servicesHeader {
   list-style: none;
 }
@@ -771,34 +799,21 @@ main {
       text-align: center;
       width: 100%;
       p {
-        //color: $darkGreen;
         margin-bottom: 2em;
       }
-    }
-    //h2, h3 {
-    //  margin: .5em 2em .5em;
-    //}
-    h2 {
-    //font-style: italic;
     }
     h3, h2 {
       color: $darkGreen;
     }
-    //.endQuote {
-    //  font-style: italic;
-    //}
     p {
       margin: 0 auto;
     }
     ul {
-      //font-family: Futura, Trebuchet MS, Arial, sans-serif;
-      //width: 60%;
       margin: 1em auto;
     }
   }
   h1 {
     text-align: center;
-    //border-bottom: solid 1px $borderColor;
   }
   ul {
     ul {
@@ -816,10 +831,10 @@ main {
 .listWrapper {
   list-style: none;
   h2 {
-      margin-left: 0;
+    margin-left: 0;
   }
   p {
-      margin-left: 1em;
+    margin-left: 1em;
   }
 }
 
@@ -828,25 +843,26 @@ main {
 }
 
 .coachingWrapper {
-  & p:last-child{
+  & p:last-child {
     text-align: center;
   }
   p {
     width: 90%;
-    font-family: 'Arsenal', sans-serif;
+    font-family: 'Roboto Slab', serif;
   }
   ul {
-      width: 65%;
-      font-family: 'Arsenal', sans-serif;
+    width: 65%;
+    font-family: 'Roboto Slab', serif;
   }
 }
+
 .offerings {
   width: 85%;
   margin: auto;
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
 }
 
 .headShot {
@@ -865,35 +881,38 @@ main {
 .header {
   .menu {
     position: relative;
-      ul {
-        padding:0;
-        margin:0;
-        li {
-          position: relative;
-          display: inline-block;
-          //padding: 0;
-          list-style: none;
-        }
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        position: relative;
+        display: inline-block;
+        list-style: none;
       }
     }
   }
+}
 
 .icon {
   display: none;
 }
 
+.current {
+  color: $darkPurple !important;
+}
+
 .mobileBodyWrapper {
   .mobileDimmer {
-    left:50%;
-    z-index:100;
+    left: 50%;
+    z-index: 100;
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     display: none;
-    background-color:rgba(0,0,0,.45);
-    cursor:pointer;
-    }
+    background-color: rgba(0, 0, 0, .45);
+    cursor: pointer;
+  }
 }
 
 //Media queries
@@ -909,7 +928,7 @@ main {
   .dinasbackground {
     width: 96%;
     margin: auto;
-    a{
+    a {
       display: none;
     }
   }
@@ -925,7 +944,7 @@ main {
 
   .GC2HeaderText {
     width: 95%;
-}
+  }
 
 }
 
@@ -964,19 +983,55 @@ main {
   .p_img {
     display: block;
   }
+
+  .bio {
+    .servicesHome {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      div {
+        margin: 15px;
+      }
+    }
+  }
 }
 
-@media screen and (max-width:780px) {
+.learnmore {
+  height: 45px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  background: #447738;
+  a {
+    color: #fff;
+    transition: 0.2s;
+    &:hover {
+      color: #a9cea0;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
 
   .bio {
     width: 94%;
     article {
-      padding: 120px 0 30px;
+      padding: 120px 0 0;
     }
   }
 
   .famWrapper {
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .bio .servicesHome {
+    width: 95%;
   }
 
   .topnav {
@@ -1002,11 +1057,11 @@ main {
   }
 
   .menu {
-      display: flex;
-      flex-direction: column;
-      div {
-        width: 100%;
-      }
+    display: flex;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
   }
   nav {
     margin: 0;
@@ -1030,9 +1085,7 @@ main {
       }
     }
   }
-}
 
-@media only screen and (max-width: 900px) {
   .bio {
     .secondWrapper {
       margin-top: -63px;
