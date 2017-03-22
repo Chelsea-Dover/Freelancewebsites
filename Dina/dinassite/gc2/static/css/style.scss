@@ -1032,7 +1032,10 @@ main {
 
   .bio .servicesHome {
     width: 95%;
-    margin-left: 0;
+  }
+
+  .servicesHome .servicesBio {
+    margin-left: 15px;
   }
 
   .topnav {
