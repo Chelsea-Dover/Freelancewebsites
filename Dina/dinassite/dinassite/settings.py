@@ -26,7 +26,8 @@ SECRET_KEY = '2aqjz42jwrq7t3^85*5s*edvr=3ydkv6athsclo!^(_qb!#3#o'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    # '/127.0.0.1:8000/'
+    'localhost',
+    '127.0.0.1',
     'glasd.webfactional.com',
     'glassmancoaching.com',
     'www.glassmancoaching.com',
@@ -47,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
