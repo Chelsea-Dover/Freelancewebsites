@@ -44,7 +44,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'gc2',
     'django.contrib.sitemaps',
+    'django.contrib.sites',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
