@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 from django.http import HttpResponse
+from django.conf.urls.static import static
 from gc2 import views
 
 sitemaps = {
