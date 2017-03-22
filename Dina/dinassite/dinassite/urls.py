@@ -36,6 +36,6 @@ urlpatterns = [
     url(r'^Diversity_Champion_2015', views.image, name='image'),
 
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"),
+    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\Allow:", content_type="text/plain"),
         name="robots_file")
 ]
